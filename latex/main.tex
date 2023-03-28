@@ -1,0 +1,521 @@
+%
+\documentclass[%
+ reprint,
+ superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,
+ amssymb,
+ amsfonts,
+ aps,
+ %pra,
+ prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[english]{babel}
+
+
+\usepackage{xcolor}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}% to put down notes/thoughts in blue text
+
+% Potential reviewers:
+% Thomas Lemberger
+% Benna Kalisky
+% Vladimir Kogan
+% Klaus Hasselbach
+% Serena Eley
+% Martino Poggio
+
+\newcommand{\Tc}{T_c}
+\newcommand{\FC}{\mathrm{FC}}
+\newcommand{\pk}{\mathrm{pk}}
+\newcommand{\PL}{\mathrm{PL}}
+\newcommand{\mA}{\mathrm{mA}}
+\newcommand{\uA}{\mu\mathrm{A}}
+\newcommand{\mT}{\mathrm{mT}}
+\newcommand{\um}{\mu\mathrm{m}}
+\newcommand{\nm}{\mathrm{nm}}
+\renewcommand{\vec}{\mathbf}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+
+% \usepackage[mathlines]{lineno}% Enable numbering of text and display math
+% \linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+\begin{document}
+
+%\title{Local magnetic response and vortex dynamics in thin film niobium near $T_c$}% Force line breaks with \\
+\title{Vortex dynamics induced by scanning SQUID susceptometry}
+% \thanks{A footnote to the article title}%
+
+\author{Logan Bishop-Van Horn}
+\altaffiliation{These authors contributed equally.}
+\affiliation{Stanford Institute for Materials and Energy Sciences, SLAC National Accelerator Laboratory, Menlo Park, California 94025, USA}
+\affiliation{Department of Physics, Stanford University, Stanford, California 94305, USA}
+
+\author{Eli Mueller}
+\altaffiliation{These authors contributed equally.}
+\affiliation{Stanford Institute for Materials and Energy Sciences, SLAC National Accelerator Laboratory, Menlo Park, California 94025, USA}
+\affiliation{Department of Physics, Stanford University, Stanford, California 94305, USA}
+
+\author{Kathryn A. Moler}
+\email{kmoler@stanford.edu}
+\affiliation{Stanford Institute for Materials and Energy Sciences, SLAC National Accelerator Laboratory, Menlo Park, California 94025, USA}
+\affiliation{Department of Physics, Stanford University, Stanford, California 94305, USA}
+\affiliation{Department of Applied Physics, Stanford University, Stanford, California 94305, USA}
+
+\date{\today}
+
+% \begin{abstract}
+% We measured the local magnetic response of a high-quality niobium thin film at temperatures close to its superconducting critical temperature using scanning SQUID susceptometry and observed discrete steps in the magnetic response as a function of both temperature and the strength of the applied local AC magnetic field, which encode information about single-vortex dynamics in the film. We modeled the scanning SQUID suscepometry measurement using a realistic sensor geometry and a combination of 2D London-Maxwell and time-dependent Ginzburg-Landau techniques, and found excellent agreement with the observed non-linear magnetic response of the film.
+% \end{abstract}
+
+% \begin{abstract}
+% Using scanning superconducting quantum interference device (SQUID) susceptometry, one can phase-sensitively measure the local magnetic response of superconducting sample by applying a millitesla-scale AC magnetic field using a micron-scale field coil and detecting the response with a micron-scale pickup loop in a low-frequency lock-in measurement. When Meissner screening is weak and the superconducting coherence length exceeds a few hundred nanometers, for example in a two-dimensional (2D) Josephson junction array or a thin film very close to its critical temperature, the local applied field from the SQUID can induce vortices in the superconductor, and subsequent motion of these vortices leads to dissipation which can be seen in the measured magnetic response. Here, in an effort to quantitatively interpret these vortex-related nonlinearities and dissipative effects in measurements of 2D superconductors with long coherence lengths, we use a combination of London-Maxwell and time-dependent Ginzburg-Landau (TDGL) techniques to model vortex dynamics induced by an AC SQUID susceptometry measurement. The model is in excellent agreement with measurements of the complex magnetic response of thin film niobium very close to its critical temperature. This work pushes scanning SQUID susceptometry beyond the regime of linear response and lays the foundation for microscopic studies of vortex-antivortex dynamics and pinning in more exotic materials systems.
+% \end{abstract}
+
+\begin{abstract}
+Dissipation in type-II superconductors subject to low-frequency AC magnetic fields arises from the motion of vortices, which can be trapped in the superconductor if it is cooled through its critical temperature in a nonzero magnetic field or generated in the superconductor below its critical temperature if the applied field exceeds its effective lower critical field. For finite-sized superconductors in uniform applied fields, the latter process is dictated by a surface energy barrier that tends to prevent vortices from entering or exiting the superconductor. In thin film superconductors, if the magnetic field source is small compared to the size of the film and located close to the surface and far from the edge, the quantity dictating the generation of vortices is the free energy barrier for creating a vortex-antivortex pair in the bulk. In this work, we measured the local magnetic response of a niobium thin film by applying a millitesla-scale AC magnetic field using a micron-scale field coil and detecting the response with a micron-scale pickup loop in a scanning superconducting quantum interference device (SQUID) susceptometry measurement. Near the film's critical temperature, we observed a step-like nonlinear and dissipative magnetic response due to the dynamics of a small number of vortex-antivortex pairs induced in the film by the local applied AC field.  We modeled the dynamics of the measurement using a combined two-dimensional London-Maxwell and time-dependent Ginzburg-Landau approach, allowing us to identify hysteresis due to pinning of one half of an induced vortex-antivortex pair as the primary contributor to the observed dissipative response. This work pushes scanning SQUID susceptometry beyond the regime of linear response and lays the foundation for microscopic studies of vortex dynamics and pinning in more exotic materials systems.
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+% \tableofcontents
+
+\section{Introduction}
+
+One of the most striking phenomena associated with the superconductivity is the spontaneous screening of both static and time-dependent magnetic fields, the Meissner effect, which is a direct manifestation of the coherence of the superconducting condensate, characterized by a macroscopic complex order parameter $\Psi=|\Psi|e^{i\theta}$. Observing the Meissner effect by measuring the response of superconductors to applied magnetic fields is one of the fundamental methods for probing the superconducting state. Typically one measures a quantity related to the complex AC susceptibility, $\chi=\chi'+i\chi''$, by applying an AC magnetic field at angular frequency $\omega$ with a field coil and detecting the sample's magnetic response with a pickup loop~\cite{Fiory1988-zw, Jeanneret1989-ss, Clem1992-ko, Claassen1997-sb, He2016-pz}. The real part $\chi'$ of the AC susceptibility is due to the dissipationless superfluid response of the superconductor and the imaginary part $\chi''$ is related to energy dissipation~\cite{Clem1991-vq, Goldfard1991-ws, Clem1994-qu}. $\chi'$ is closely related to the London penetration depth, $\lambda$, which is in turn related to the superfluid density $N_s=|\Psi|^2$. For temperatures $T$ that are small compared to the critical temperature $\Tc$, $\chi''$ is usually small and $N_s(T)$ is sensitive to the structure of the superconducting gap~\cite{Prozorov2011-vi}. Measurements of $\chi$ as a function of temperature show a peak in the dissipative component $\chi''$ around $\Tc$, the width of which is considered a measure of the homogeneity of the superconductor~\cite{Fiory1988-zw, Bozovic2016-sl}. 
+
+In type-II superconductors, and thin films which can be effectively type-II even if grown from a material that is type-I in the bulk~\cite{Tinkham1964-vo, Fetter1967-ui}, for applied magnetic fields above an effective lower critical field $B_{c1}^\mathrm{eff}$\footnote{We define the effective lower critical field $B_{c1}^\mathrm{eff}$ to be the applied field at which vortices actually begin to penetrate the superconductor. This is an empirical value that depends on the spatial distribution of the applied magnetic field, surface defects, etc. The thermodynamic critical field $B_c<B_{c1}^\mathrm{eff}$ is the field above which a state with one or more vortices has a lower free energy than the vortex-free state, assuming a spatially uniform applied field. Between $B_c$ and $B_{c1}^\mathrm{eff}$, a metastable vortex-free state can exist due to the surface barrier or the free energy barrier to generate a spatially-separated vortex-antivortex pair~\cite{Lemberger2013-ha,Lemberger2013-lu}. $B_{c1}^\mathrm{eff}$ is sometimes called the superheating field~\cite{Matricon1967-oh}.}, magnetic flux can pass through the superconductor in the form of vortices, which are topological defects in the condensate at which the superfluid density $|\Psi|^2$ goes to zero and around which the phase of the order parameter $\theta=\arg(\Psi)$ changes by $2\pi$, resulting in an object with a small normal metal core surrounded by a whirlpool of supercurrent.
+The dissipative component of the AC susceptibility, $\chi''$, arises from the motion of vortices, which experience an oscillating force due to screening currents induced by the applied AC magnetic field~\cite{Clem1991-vq}. AC susceptibility measurements using the two-coil mutual inductance technique~\cite{Fiory1988-zw, Jeanneret1989-ss, Claassen1997-sb} typically employ field coils and pickup loops of diameter $\gtrsim$ 1 mm. As a result, these experiments measure the average response of the film, potentially with contributions from many vortices and from spatial inhomogeneities on sub-mm length scales.
+
+In this work, we measured the low-frequency AC susceptibility of a niobium thin film close to its critical temperature using a superconducting quantum interference device (SQUID) susceptometer with a micron-scale field coil and pickup loop. We observed distinct steps in both the in-phase (superfluid) and out-of-phase (dissipative) components of the susceptibility with increasing temperature and local applied AC field, which are clear ``fingerprints'' of the dynamics of a small number of vortices induced in the film by the SQUID susceptometer. We modeled the dynamics of the measurement using a combined two-dimensional (2D) London-Maxwell~\cite{Brandt2004-ew,Brandt2005-wj,Bishop-Van_Horn2022-sy} and time-dependent Ginzburg-Landau (TDGL)~\cite{Watts-Tobin1981-mn, Kramer1978-kb, Jonsson2022-mb, Bishop-Van_Horn2023-dm} approach, allowing us to identify hysteresis due to pinning of one half of an induced vortex-antivortex pair as the primary contributor to the observed dissipative response.
+
+In particular, during one half of the AC cycle, one or more vortex-antivortex pairs are induced in the film if the peak applied field exceeds the effective lower critical field $B_{c1}^\mathrm{eff}$ (which depends on the geometry of the field coil, among other factors)~\footnote{We use the convention that a vortex is associated with a circulating current in the same direction as the instantaneous current in the field coil, and an antivortex has a circulating current in the opposite direction.}. The vortices are pulled towards the center of the field coil, where they are trapped by the local applied field. The antivortices are pushed away from the field coil, causing some of them to exit the film or become pinned far from the field coil so that they no longer participate in the measurement, resulting in a hysteretic magnetic response. The time-dependent spatial distribution of vortices is determined by a competition between the vortex-field coil interaction and the attractive vortex-antivortex interaction.
+
+Generating vortices and measuring their dynamics with a micron-scale sensor provides a complementary approach to bulk magnetization, AC susceptibility, and global transport measurements which, for finite-sized films, can be dominated by a surface barrier that depends sensitively on the geometry and characteristics of the sample edge~\cite{Bean1964-hv, Hernandez2002-nx, Benfenati2020-mg}. For example, it has been shown that finite-size effects dramatically alter transport characteristics of thin films and Josephson junction arrays near the Berezinskii–Kosterlitz–Thouless (BKT) transition, potentially obscuring the vortex unbinding transition entirely~\cite{Herbert1998-ig, Gurevich2008-vi}. Thus, in addition to resolving vortex dynamics at the single-vortex level, scanning SQUID susceptometry provides a route to study and potentially minimize the contribution of surface effects in order to more directly probe vortex-antivortex and vortex-defect interactions in 2D superconducting systems. Moreover, the numerical methods presented here allow one to model (in the weak screening limit) vortex dynamics for any spatial distribution of applied field and for mesoscopic 2D superconducting devices of any geometry, including those with holes, normal metal contacts, edge defects, or spatial inhomogeneity in the critical temperature.
+
+\section{Background}
+
+\subsection{AC losses in type-II superconductors}
+\label{sec:ac-loss}
+
+As described in Ref.~\cite{Clem1991-vq}, there are broadly three different mechanisms for loss in type-II superconductors subject to applied AC magnetic fields: (1) viscous flux flow, (2) bulk flux pinning, and (3) surface flux pinning. All three mechanisms are related to the fact that a vortex in the presence of a current experiences a Lorentz force per unit length
+\begin{equation}
+    \label{eq:lorentz}
+    \mathbf{f}=\mathbf{J}\times\hat{\mathbf{n}}\Phi_0,
+\end{equation}
+where $\hat{\mathbf{n}}$ is a unit vector indicating the axis of the vortex core, $\Phi_0=h/2e$ is the superconducting flux quantum, and $\vec{J}$ is the current density. Meissner screening of a time-dependent applied magnetic field, resulting in a time-dependent supercurrent density $\mathbf{J}_s$, will exert a dynamic Lorentz force on a vortex in the superconductor. The vortex will move due to the Lorentz force if it is not strongly pinned, and motion of the normal core of the vortex dissipates energy. For this reason, engineering the pinning landscape to reduce dissipation is one of the key challenges in applied superconductivity~\cite{Eley2021-lu}.
+
+Loss mechanism (1) is analogous to eddy current losses in normal metals, with the normal state resistivity replaced by an effective flux flow resistivity, which depends on the applied magnetic field. Eddy current losses, for which the energy dissipated per AC cycle depends strongly on frequency $\omega$, are negligible at low frequencies and for small samples when $\omega\tau_f\ll1$, where $\tau_f$ is the characteristic time required for changes in the magnetic flux to diffuse across the sample.
+
+Mechanisms (2) and (3) are hysteretic losses, which occur when the flux in the superconductor is out of equilibrium with the applied field due to vortex pinning~\cite{Clem1994-qu}. For these mechanisms, the energy dissipated per AC cycle is independent of frequency. Bulk flux pinning losses, where energy is dissipated as vortices ``hop'' between pinning sites, dominate at low frequency in superconductors with many pinning centers or a large critical current density. Bulk pinning losses also include dissipation arising from the annihilation of vortices with antivortices in the bulk~\cite{Clem1979-tm}.
+
+Surface pinning losses occur when the flux in the superconductor is out of equilibrium with the applied field due to the presence of a surface barrier, an energy barrier that must be overcome for a vortex to enter or leave the superconductor~\cite{Bean1964-hv, Hernandez2002-nx}. The surface barrier arises primarily because the direction of the Meissner screening current flowing near the sample surface (or edge in the case of a thin film in an out-of-plane magnetic field) is opposite the direction of the circulating current around a vortex located inside the superconductor. A detailed Ginzburg-Landau analysis of the surface barrier for uniform applied fields in 2D superconductors, including nonidealities such as surface roughness, is given in Ref.~\cite{Benfenati2020-mg}.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/squid-outline.pdf}
+    \caption{{\bf London-Maxwell simulation of the applied magnetic field and vector potential from the SQUID susceptometer.} ({\bf a}) Modeled geometry of the SQUID tip, i.e., the front field coil-pickup loop pair. A current $I_\FC$ flows counterclockwise in the field coil (green loop), and the SQUID measures the flux $\Phi_\PL$ through the front pickup loop (orange loop). The blue and orange polygons are superconducting shields covering the pickup loop and field coil leads respectively. The blue wiring layer is closest to the sample surface during measurement, the green wiring layer is farthest from the surface, and the orange wiring layer sits in between. ({\bf b}) Out-of-plane component of the magnetic field from the field coil per unit field coil current, $B_z/I_\FC$, evaluated at a plane $z_0=0.5\,\um$ below the SQUID chip. The maximum value near the center of the field coil is $0.175\,\mT/\mA$. Here, $I_\FC>0$ indicates a counterclockwise circulating current in the field coil. The rest of the SQUID circuit, lying to the south and east as it is drawn here, is well-shielded and does not apply any significant field to the sample. ({\bf c}) In-plane magnetic vector potential per unit field coil current, $\vec{A}/I_\FC=(A_x\hat{\mathbf{x}} + A_y\hat{\mathbf{y}})/I_\FC$, evaluated in the Lorenz gauge at a plane $z_0=0.5\,\um$ below the SQUID. ({\bf b}) and ({\bf c}) are related by $\vec{\nabla}\times\vec{A}=B_z\hat{\mathbf{z}}$. The simulation method is described in Appendix~\ref{sec:london-maxwell} and Ref.~\cite{Bishop-Van_Horn2022-sy}. The layer structure of the SQUID susceptometer is such that, for a given $z_0$, the actual height of the pickup loop and field coil above the sample surface are approximately $z_0+0.3\,\um$ and $z_0+0.7\,\um$, respectively.}
+    \label{fig:squid}
+\end{figure*}
+
+For AC susceptibility measurements of thin film superconductors, it is convenient to apply the magnetic field and detect the sample response using coils that are much smaller than the size of the film, both to simplify analysis of the measured magnetic response~\cite{Jeanneret1989-ss, Turneaure1996-ns, Turneaure1998-mo, He2016-pz} and to minimize the extent to which the measurement averages over spatial inhomogeneity. In the limit that the field coil is much smaller than the film and located close to the film surface and far from the film edge, the applied magnetic field at the edge approaches zero and the Meissner screening contribution to the surface energy barrier vanishes. In this case, the onset of vortex-related losses will be dictated by the energy barrier for generating (or ``unbinding'') a vortex-antivortex pair within the film~\cite{Lemberger2016-pb}.
+
+
+\subsection{Scanning SQUID susceptometry}
+\label{sec:susceptometry}
+
+In scanning SQUID susceptometry, a micron-scale single-turn field coil (FC) locally applies a magnetic field to a sample, and a pickup loop (PL), which is concentric with the field coil and connected to flux-sensitive SQUID circuit, measures the sample's magnetic response~\cite{Gardner2001-gr, Huber2008-il, Kirtley2016-zz}. The SQUID susceptometer used in this study is gradiometric, with two counter-wound field coil-pickup loop pairs separated by $\sim$ 1 mm, only one of which (the ``front field coil'') is brought close to the sample surface [Figure~\ref{fig:squid}({\bf a})]. Each FC-PL pair has a mutual inductance $|\Phi_\PL/I_\FC|$ of approximately $285\,\Phi_0/\mathrm{A}$, meaning that a current $I_\FC=1\,\mathrm{mA}$ flowing through the field coil threads a flux $|\Phi_\PL|=0.285\,\Phi_0\approx0.59\,\mathrm{mT}\cdot\um^2$ through the pickup loop. The gradiometric design of the device means that ideally in the presence of a sample with no magnetic response, e.g. a superconductor with London penetration depth $\lambda\to\infty$, the total mutual inductance between the two field coils and the SQUID is zero: $M_\infty = (\Phi^\mathrm{front}_\PL + \Phi^\mathrm{back}_\PL)/I_\FC \approx 0\,\Phi_0/\mathrm{A}$ (see Appendix~\ref{sec:data-processing}).
+
+When the front field coil is brought close to a superconducting sample, the sample screens the magnetic field from the field coil, reducing the mutual inductance of the front FC-PL pair, $\Phi^\mathrm{front}_\PL/I_\FC$, and thus the total mutual inductance of the susceptometer. The amount by which the sample modifies the SQUID mutual inductance is the scanning SQUID susceptibility signal,
+\begin{equation}
+    \begin{split}
+        M(x, y)&=\left(\Phi^\mathrm{front}_\PL(x, y)+\Phi^\mathrm{back}_\PL\right)/I_\FC\\
+        &=\Delta\Phi_\PL^\mathrm{front}(x, y)/I_\FC + M_\infty,
+        \label{eq:def-susc}
+        \end{split}
+\end{equation}
+% \begin{equation}
+%     M(x, y)=\Delta\Phi_\PL^\mathrm{front}(x, y)/I_\FC,
+%     \label{eq:def-susc}
+% \end{equation}
+which is measured as a function of relative sample-sensor position $(x, y)$ as the sensor is raster-scanned over the sample surface at a fixed standoff distance $z_0$, or as a function of another parameter (e.g. temperature) for a fixed sensor position. $M$ is measured using low-frequency lock-in techniques to improve sensitivity and enable detection of both the in-phase magnetic response $M'(x, y)$ and out-of-phase magnetic response $M''(x, y)$ of the sample, which are related to $\chi'$ and $\chi''$ respectively. In such a measurement, the current through the field coil is
+\begin{equation}
+    \label{eq:I_FC}
+    I_\FC(t)=I_{\FC,\,\pk}\cos(\omega t),
+\end{equation}
+where $I_{\FC,\,\pk}$ is the peak amplitude of the field coil current and $\omega$ is angular frequency of the lock-in amplifier excitation (typically $\omega/2\pi\sim 1\,\mathrm{kHz}$). The complex magnetic response, as measured by a lock-in amplifier, is then given by
+\begin{equation}
+    \label{eq:M-integral}
+    M(x, y)=\frac{\sqrt{2}}{I_{\FC,\,\pk}}\int \Delta\Phi^\mathrm{front}_\PL(x, y, t)e^{-i\omega t}\,\mathrm{d}t,
+\end{equation}
+where the integral is taken over many AC cycles, as determined by the lock-in amplifier time constant. From this demodulated complex mutual inductance signal, we define $M'=\Re(M)$ and $M''=\Im(M)$. For the remainder of this work, we will refer to the front field coil simply as ``the field coil.''
+
+If no vortices are present near the field coil, the in-phase component $M'$ is a direct measure of the local value of the sample's magnetic screening length (the London penetration depth $\lambda$ for bulk superconductors or $\Lambda=\lambda^2/d$ for thin films), which is in turn related to the superfluid density $N_s$~\cite{Kirtley2012-od}.
+% There are typically two sources of large systematic errors when inferring $\lambda$ or $N_s$ from measurements of $M'$. First, for a given $\lambda$, $M'$ depends strongly the distance between the sample surface and the surface of the SQUID susceptometer chip, $z_0$, which is difficult to calibrate \emph{in situ}. Second, the tip of the SQUID susceptometer is composed of a multi-layer superconducting structure with a complicated geometry [Figure~\ref{fig:squid}({\bf a})], which must be taken into account in any model of a SQUID susceptometry measurement.
+Ideally, if there is no dissipation in the sample, $M$ is purely real. Dissipation and nonzero $M''$ can arise even far below the superconductor's critical temperature $\Tc$ due to motion of vortices under the Lorentz force (Eq.~\ref{eq:lorentz}) caused by the local applied AC field.
+% Vortices present in the superconductor due to cooling through $\Tc$ in nonzero magnetic field experience a Lorentz force (Eq.~\ref{eq:lorentz}) arising from Meissner screening of the applied AC field.
+This time-varying Lorentz force can cause the vortices to oscillate about the bottom of their pinning potentials or hop between pinning sites, leading to nonzero $M''$. This effect has been used to study anisotropic pinning in unconventional superconductors~\cite{Kalisky2011-ns, Zhang2019-hl, Bishop-Van_Horn2019-ng, Iguchi2021-wm}.
+
+In contrast to Refs.~\cite{Kalisky2011-ns, Zhang2019-hl, Bishop-Van_Horn2019-ng, Iguchi2021-wm}, here we examine the case where there are no vortices pinned near the SQUID when cooling through $\Tc$, i.e., a zero-field cooling situation. In such a scenario, dissipation due to vortex motion can only occur if vortices are first induced in the superconductor by the local applied AC field. Given the magnitude of the magnetic field that can be applied by the SQUID field coil (up to a few $\mT$), this mechanism is possible only for systems with a coherence length  exceeding a few hundred nanometers, for example a 2D Josephson junction array~\cite{Bishop-Van_Horn2022-lr} or a thin film close to its critical temperature.
+
+\section{Experiment \& Modeling}
+\label{sec:experiment}
+
+We measured a sputtered niobium (Nb) film with thickness $d=200\,\nm$ and critical temperature $\Tc\approx9.4\,\mathrm{K}$ using a SQUID susceptometer with the geometry shown in Figure~\ref{fig:squid}({\bf a}). The film has a variety of lithographically patterned structures (holes, slots, etc.), along with large regions of continuous Nb. While the film is thick compared to the zero-temperature London penetration depth and coherence length of niobium ($\lambda(0),\,\xi(0) \lesssim 100\,\mathrm{nm}$), both the London penetration depth $\lambda(T)$ and the coherence length $\xi(T)$ diverge at $\Tc$ so that, for temperatures sufficiently close $\Tc$, the film may be considered 2D. Near $\Tc$, the film is magnetically 2D in the sense that $\Lambda(T)=\lambda^2(T)/d$ is large compared to the film thickness $d$, so that the supercurrent density can be assumed to be uniform in the $z$ (out-of-plane) direction, giving a thickness-integrated sheet supercurrent density $\vec{K}_s=d\vec{J}_s$. Similarly, when $\xi(T)$ is large compared to $d$, the superfluid density $N_s=|\Psi|^2$ can be assumed to be uniform in the $z$ direction.
+
+\subsection{Magnetic response of the continuous film}
+
+% \begin{figure*}
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/susc-vs-temp-field-2row.pdf}
+%     \caption{{\bf Fingerprints of few-vortex dynamics in the nonlinear magnetic response as a function of applied local AC magnetic field and temperature.} ({\bf a}, {\bf b}) $M=M'+iM''$ as a function of temperature for varying peak field coil currents. The insets show enlarged views of the temperature range near $\Tc$ in which vortex dynamics are observed. ({\bf c}, {\bf d}) The complex AC susceptibility signal, $M=M'+iM''$, decomposed into ({\bf c}) real and ({\bf d}) imaginary parts, a function of peak field coil current for temperatures approaching $\Tc$. The slight upturn in magnitude $M'$ at the lowest field coil currents in ({\bf c}) is most likely an artefact of the SQUID readout instrumentation.}
+%     \label{fig:M-vs-Ifc}
+% \end{figure*}
+
+We measured the local AC susceptibility in a region of continuous Nb film, roughly 25 $\um$ away from the film edge or any patterned features in the film. The front FC-PL pair of the SQUID susceptometer was positioned a distance $z_0\approx 0.5\,\um$ above the sample surface. The drive frequency for all measurements was fixed at $\omega/2\pi=500$ Hz. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/susc-vs-temp-1col.pdf}
+    \caption{{\bf Temperature dependence of the complex magnetic response.} ({\bf a}) In-phase and ({\bf b}) out-of-phase components of the complex magnetic response, $M=M'+iM''$, as a function of temperature for varying peak field coil currents. The second row shows ({\bf c}) $M'$ and ({\bf d}) $M''$ in the temperature range near $\Tc$ in which vortex dynamics are observed. Sharp steps in $M$ very close to $T_c$ ({\bf b}, {\bf d}) are due to the dynamics of a small number of vortices induced in the film.}
+    \label{fig:M-vs-T}
+\end{figure}
+
+Figure~\ref{fig:M-vs-T} shows the complex AC susceptibility, $M=M'+iM''$, as a function of temperature from 6 K to above $\Tc$ for peak field coil currents ranging from 0.5 mA to 10 mA, where $I_{\FC,\,\pk} = 10\,\mA$ corresponds to a maximum applied magnetic field of approximately 1.75 mT [Figure~\ref{fig:squid}({\bf b})]. At the lowest temperatures, $\lambda(T)$ is close to its zero-temperature value, $\lambda(0)$, and the film strongly screens the magnetic field from the field coil, reducing the mutual inductance between the field coil and pickup loop by approximately $(100\,\Phi_0/\mathrm{A})/(285\,\Phi_0/\mathrm{A}) \approx 35\%$. At these temperatures, $M$ is dominated by the superfluid response $M'$, the dissipative response $M''$ is small and roughly temperature-independent, and both components are independent of the applied field $H_\mathrm{applied}\propto I_{\FC,\,\pk}$, indicating a linear magnetic response. As $T$ approaches $\Tc$, $\lambda(T)$ diverges and the magnitude of superfluid response decreases rapidly as the film loses the ability to screen the applied field. As highlighted in Figure~\ref{fig:M-vs-T}({\bf c}, {\bf d}), at temperatures above 9.3 K, there is an $I_{\FC,\,\pk}$-dependent change in the slope of $M'(T)$, accompanied by a significant increase in the magnitude of the out-of-phase component $M''$, which is indicative of dissipation due to vortex dynamics induced by the applied AC field.
+% The temperature dependence of the linear superfluid response is analyzed in Appendix~\ref{sec:estimate-tc}.
+
+% \textcolor{red}{[Possibly put this fitting thing in an appendix]}
+% To analyze the measured magnetic response near $\Tc$, we begin by attempting to pin down the values of the parameters $\lambda(T)$, $\Tc$, and $z_0$. As described in detail in Appendix~\ref{sec:estimate-tc}, using a London-Maxwell model of the SQUID susceptometry measurement we fit the measured in-phase response $M'(T)$ in a parameter regime where the film responds linearly and non-dissipatively to the applied field
+
+% To analyze the measured magnetic response near $\Tc$, we begin by attempting to pin down the values of the parameters $\lambda(T)$, $\Tc$, and $z_0$. We can estimate all three parameters by performing least-squares fit of $M'$ vs. $T$ [Figure~\ref{fig:M-vs-T}({\bf a})] to a model in which we simulate the superfluid response of the sample by self-consistently solving the 2D London equation in the film and in the three superconducting layers of the SQUID susceptometer (see Appendix~\ref{sec:london-maxwell} and Ref.~\cite{Bishop-Van_Horn2022-sy} for more details). We assume the following phenomenological temperature dependence for $\lambda$:
+% \begin{equation}
+%     \label{eq:lambda-T}
+%     \lambda(T)=\frac{\lambda(0)}{\sqrt{1-(T/\Tc)^a}}.
+% \end{equation}
+% Eq.~\ref{eq:lambda-T} with exponent $a=4$ is the temperature dependence predicted by the Gorter-Casimir two-fluid model~\cite{Gorter1955-ip}, whereas $a=2$ is sometimes found to be in better agreement with measurements of $\lambda(T)$, and Ginzburg-Landau theory predicts $a=1$ in the limit $T/\Tc \to 1$~\cite{Tinkham2004-ln}. To work around this ambiguity, we performed the fit with all three values of the exponent, $a=1$, 2, and 4. In all cases, $\lambda(0)$, $\Tc$, and $z_0$ were taken as free parameters. We only fit data taken at temperatures $T\geq9\,\mathrm{K}$ because below this temperature, $\lambda(T)<d$ and the film cannot be reliably modeled as two-dimensional. We also excluded from the fit all data taken at temperatures above $9.35\,\mathrm{K}$, where nonlinearity due to vortex dynamics is clearly visible even at the lowest field coil current, $I_{\FC,\,\pk}=0.5$ mA.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/M-vs-T-fit.pdf}
+%     \caption{{\bf Method for estimating $\Tc$, $\lambda(T)$, and $z_0$.} ({\bf a})~Temperature dependence of $M'$ measured with $I_{\FC,\,\pk}=0.5$ mA (black dots), and simulated using the model described in the text, with $\lambda(T)$ given by Eq.~\ref{eq:lambda-T} (colored lines). The simulated results for $a=1$, 2, and 4 are indistinguishable, so only the $a=4$ result (orange) is visible. The inset shows an enlarged view near $\Tc$, highlighting the onset of vortex dynamics, which is not captured by the London model. The dashed vertical line shows the extracted $\Tc=9.389\,\mathrm{K}$. ({\bf b})~The inferred London penetration depth, $\lambda(T)$ for the three models. Although the fits for $a=1$, 2, and 4 result in different estimates for $\lambda(0)$, the inferred values for $\lambda(T)$ are indistinguishable in the temperature range of interest, and the best-fit values for $\Tc$ and $z_0$ (shown in the figure legend) are consistent between the three models.}
+%     \label{fig:M-vs-T-fit}
+% \end{figure}
+
+% The results of the three least-squares fits using this technique, applied to $M'(T)$ measured at $I_{\FC,\,\pk}=0.5$ mA, are shown in Figure~\ref{fig:M-vs-T-fit}. The three models, with $a=1$, 2, and 4, result in different best-fit estimates for the zero-temperature London penetration depth, $\lambda(0)$, however the models all reproduce the measured $\lambda(T)$ in the temperature range of interest [Figure~\ref{fig:M-vs-T-fit}({\bf a})]. The best-fit values for the critical temperature are nearly identical between the three models ($\Tc=9.389$ K) and the best-fit values for the sensor/sample spacing $z_0$ agree to within 4\%. As shown in Figure~\ref{fig:M-vs-T-fit}({\bf b}), the three models result in nearly identical temperature dependence for the London penetration depth $\lambda(T)$ (given by Eq.~\ref{eq:lambda-T}) in the temperature range of interest, $9\,\mathrm{K}\leq T < \Tc$. Thus, in this temperature range, there is a single curve $\lambda(T)$ and set of parameters $\{\Tc,z_0\}$ that are consistent with the measured $M'(T)$. Based on this, in the analysis that follows, we will assume $\Tc=9.389$ K, $z_0=0.69\,\um$, and that above $T=9$ K, $\lambda$ has the temperature dependence shown in Figure~\ref{fig:M-vs-T-fit}({\bf b}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/M-vs_I_fc.pdf}
+    \caption{{\bf Fingerprints of few-vortex dynamics in the nonlinear magnetic response as a function of applied local AC magnetic field.} The complex magnetic response $M=M'+iM''$, decomposed into ({\bf a}) its real part and ({\bf b}) its imaginary part. The distinct steps in both $M'$ and $M''$ with increasing field coil current are indicative of the dynamics of a small number of vortices induced in the film. The slight upturn in $M'$ at the lowest field coil currents $I_{\FC,\,\pk}$ is likely an artefact of the SQUID readout instrumentation.}
+    \label{fig:M-vs-Ifc}
+\end{figure}
+
+% Having established estimates for the critical temperature, sensor-sample spacing $z_0$, and temperature dependence of the penetration depth near $\Tc$, we turn to the  dependence of $M$ on the strength of the applied AC field.
+To further investigate the nonlinear, dissipative magnetic response observed near $\Tc$, we measured $M$ while varying the amplitude of the AC current through the field coil over the range $I_{\FC,\,\pk} = 0.1 - 10\,\mA$. Figure~\ref{fig:M-vs-Ifc} shows the complex magnetic response $M=M'+iM''$ as a function of $I_{\FC,\,\pk}$ for a series of temperatures near $T_c$.  At all temperatures, $M'$ starts out as approximately constant as $I_{\FC,\,\pk}$ is increased from zero, indicating that the local susceptibility is dominated by the linear superfluid response.
+% Thus, for small $I_{\FC,\,\pk}$, $M'$ is simply a measure of the effective penetration depth $\Lambda(T)=\lambda^2(T)/d$ of the film~\cite{Kirtley2012-od}.
+As $I_{\FC,\,\pk}$ is increased further, $M'$ approaches zero in discrete steps, accompanied by a sawtooth pattern in the out-of-phase component of the signal, $M''$. This discrete, step-like pattern in the $M$ vs. $I_{\FC,\,\pk}$ curve results from the dynamics of a small number of vortex-antivortex pairs induced in the film by the SQUID susceptometry measurement. The value of $I_{\FC,\,\pk}$ at which the first step in $M$ occurs corresponds to the effective lower critical field of the film, which decreases rapidly as the temperature approaches $T_c$.
+
+% \begin{figure*}
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/susc-vs-temp-field.pdf}
+%     \caption{{\bf Fingerprints of few-vortex dynamics in the nonlinear magnetic response as a function of applied local AC magnetic field and temperature.} The first two rows ({\bf a}-{\bf d}) show the complex AC susceptibility $M=M'+iM''$ as a function of peak field coil current for temperatures approaching $\Tc$. ({\bf a}, {\bf c}) $M=M'+iM''$ decomposed into ({\bf a}) real and ({\bf c}) imaginary parts. ({\bf b}, {\bf d}) $M=M'+iM''$ decomposed into ({\bf c}) magnitude $|M|$ and ({\bf d}) phase. The slight dip in magnitude $|M|$ at the lowest field coil currents $I_{\FC,\,\pk}$ in ({\bf b}) is most likely an artefact of the SQUID readout instrumentation. ({\bf e}, {\bf f}) $M=M'+iM''$ as a function of temperature for varying peak field coil currents. The insets show enlarged views of the temperature range near $\Tc$ in which vortex dynamics are observed.}
+%     \label{fig:M-vs-Ifc}
+% \end{figure*}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/M-vs_I_fc.pdf}
+%     \caption{{\bf Fingerprints of few-vortex dynamics in the nonlinear magnetic response as a function of applied local AC magnetic field.} The complex magnetic response $M=M'+iM''$, decomposed into ({\bf a}) its real part and ({\bf b}) its imaginary part. The distinct steps in both $M'$ and $M''$ with increasing field coil current are indicative of the dynamics of a small number of vortices induced in the film. The slight upturn in $M'$ at the lowest field coil currents $I_{\FC,\,\pk}$ is likely an artefact of the SQUID readout instrumentation.}
+%     \label{fig:M-vs-Ifc}
+% \end{figure}
+
+\subsection{Time-dependent Ginzburg-Landau modeling}
+\label{sec:modeling}
+
+The observed nonlinear behavior [Figure~\ref{fig:M-vs-Ifc}] is reminiscent of the results of measurements and TDGL simulations of the DC magnetization~\cite{Kanda2004-lx, Hernandez2002-nx}, and microwave magnetic response~\cite{Hernandez2002-oe, Hernandez2008-mi} of mesoscopic type-II superconductors subject to a spatially uniform applied magnetic field, where a step-like magnetic response arises primarily from the surface energy barrier. Our measurements differ from the scenarios considered in Refs.~\cite{Kanda2004-lx, Hernandez2002-nx, Hernandez2002-oe, Hernandez2008-mi} in two important respects. First, the applied magnetic field is not spatially uniform, rather it is applied by an asymmetric micron-scale current loop. Second, in constrast to Refs.~\cite{Hernandez2002-oe, Hernandez2008-mi}, the measurement timescale $2\pi/\omega=1/(500\,\mathrm{Hz})=2\,\mathrm{ms}$ is many orders of magnitude longer than the relevant relaxation time in the superconductor, as estimated below.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/single-vortex-tdgl-flat.png}
+    \caption{{\bf Generating a single isolated vortex with the SQUID field coil.} Each column shows a snapshot of the output of a TDGL simulation taken at the time indicated at the top of the column. The simulation parameters are $\xi=0.9\,\um$, $\lambda=1.35\,\um$, $z_0=0.5\,\um$, and $I_\FC=2.5\,\mathrm{mA}$, where $I_\FC$ is the DC current flowing counterclockwise through the field coil. The initial state of the system at time $t_\mathrm{sim}=0$ is $\psi(\mathbf{r}, t_\mathrm{sim})=1$. From top to bottom, the rows show the magnitude of the order parameter $|\psi|$, the phase of the order parameter $\arg(\psi)$, and the magnitude of the sheet current density $|\mathbf{K}|$.
+    Around $t_\mathrm{sim}=75\tau_0$ (second column), a vortex-antivortex pair is induced in the film and subsequently pulled apart by the Lorentz force (Eq.~\ref{eq:lorentz}) until the antivortex reaches the edge of the film around $t_\mathrm{sim}=250\tau_0$, leaving an isolated vortex trapped beneath the field coil. For $t_\mathrm{sim}>300\tau_0$, the system is stable indefinitely, with the supercurrent circulating counterclockwise just outside the vortex core and clockwise everywhere else. The SQUID field coil and pickup loop are drawn to scale in the first column of the second row.}
+    \label{fig:squid-vortex}
+\end{figure*}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/single-vortex-tdgl-vert.png}
+%     \caption{{\bf Generating a single isolated vortex with the SQUID field coil.} Each row shows a snapshot of the output of a TDGL simulation taken at the time indicated to the left of the row. The simulation parameters are $\xi=0.9\,\um$, $\lambda=1.35\,\um$, $z_0=0.5\,\um$, and $I_\FC=2.5\,\mathrm{mA}$, where $I_\FC$ is the DC current flowing counterclockwise through the field coil. The initial state of the system at time $t_\mathrm{sim}=0$ is $\psi(\mathbf{r}, t_\mathrm{sim})=1$. From left to right, the columns show the magnitude of the order parameter $|\psi|$, the phase of the order parameter $\arg(\psi)$, and the magnitude of the sheet current density $|\mathbf{K}|$.
+%     Around $t_\mathrm{sim}=75\tau_0$ (second row), a vortex-antivortex pair is induced in the film and subsequently pulled apart by the Lorentz force (Eq.~\ref{eq:lorentz}) until the antivortex reaches the edge of the film around $t_\mathrm{sim}=250\tau_0$, leaving an isolated vortex trapped beneath the field coil. For $t_\mathrm{sim}>300\tau_0$, the system is stable indefinitely, with the supercurrent circulating counterclockwise just outside the vortex core and clockwise everywhere else. The SQUID field coil and pickup loop are drawn to scale in the second column of the first row.}
+%     \label{fig:squid-vortex}
+% \end{figure}
+
+To interpret the results shown in Figure~\ref{fig:M-vs-Ifc}, we have performed TDGL simulations (see Appendix~\ref{sec:tdgl} and Ref.~\cite{Bishop-Van_Horn2023-dm}) that take into account a realistic model of the SQUID sensor geometry [Figure~\ref{fig:squid}] and the dynamic, but low-frequency, nature of the AC susceptibility measurement. The characteristic time scale for this TDGL model is $\tau_0=\mu_0\sigma\lambda^2$, where $\mu_0$ is the vacuum permeability, $\sigma$ is the normal state conductivity of the film, and $\lambda$ is the London penetration depth (see Appendix~\ref{sec:tdgl}). Even assuming a very high normal state conductivity, e.g. $\sigma=(10^{-2}\mu\Omega\cdot\mathrm{cm})^{-1}=10^4\,\mathrm{S}/\um$~\cite{Webb1969-mb}, and noting that $\lambda(T)$ diverges at $\Tc$, this time scale is $\tau_0<\mu_0\cdot10^4\,\mathrm{S}/\um\cdot(2\,\um)^2\approx50\,\mathrm{ns}$ in the temperature range of our measurements, which is more than four orders of magnitude shorter than the measurement time scale $2\pi/\omega=2\,\mathrm{ms}$. Thus, we will assume that in the absence of pinning, the order parameter $\Psi$ would be at equilibrium with the applied vector potential at all points in time. This ``quasistatic approximation'' implies that (1) vortices are allowed to reach a steady state configuration before the applied AC field changes significantly~\cite{Lemberger2016-pb}, (2) only pinning-related losses will be captured by the model (cf. Section~\ref{sec:ac-loss}), and (3) the simulated dynamics will be independent of the drive frequency $\omega$. The measurements support this assumption, as we see no qualitative difference in the nonlinear magnetic response if we change the drive frequency from $\omega/2\pi=500\,\mathrm{Hz}$ to $\omega/2\pi=5\,\mathrm{kHz}$.
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/single-vortex-tdgl.png}
+%     \caption{{\bf Generating a single isolated vortex with the SQUID field coil.} Each row shows a snapshot of the output of a TDGL simulation at the time indicated to the left. The simulation parameters are $\xi=0.6\,\um$, $\lambda=1.4\,\um$, $z_0=0.69\,\um$, and $I_\FC=2.5\,\mathrm{mA}$, where $I_\FC$ the DC current flowing counterclockwise through the field coil. The initial state of the system at time $t=0$ is $\psi(\mathbf{r}, t)=1$. From left to right, the columns show the magnitude of the order parameter $|\psi|$, the phase of the order parameter $\arg(\psi)$, the magnitude of the sheet current density $|\mathbf{K}|$, and the current vorticity $v_\mathbf{K}=(\nabla\times\mathbf{K})\cdot\hat{\mathbf{z}}$. Positive vorticity (red, counterclockwise circulating current) indicates a vortex and negative vorticity (blue, clockwise circulating current) indicates an antivortex. Around $t=125\tau_0$ (second row), a vortex-antivortex pair is induced in the film and subsequently pulled apart by the Lorentz force (Eq.~\ref{eq:lorentz}) until the anti-vortex reaches the edge of the film around $t=600\tau_0$. The top four rows show a $20\times20\,\um^2$ region centered on the field coil (white box in row 5, column 2), whereas the bottom two rows show the entire modeled geometry, a circle with $R_\mathrm{film}=20\,\um$. The SQUID field coil and pickup loop are draw to scale in column 2 in the first and fifth rows.}
+%     \label{fig:squid-vortex}
+% \end{figure}
+
+The inputs to the TDGL model are the applied magnetic vector potential $\mathbf{A}_\mathrm{applied}(\mathbf{r})$ due to the SQUID field coil for a given field coil current $I_\FC$ [Figure~\ref{fig:squid}({\bf c})] and the relevant parameters of the Nb film, $\xi$, $\lambda$, and $d$. The outputs of the TDGL model include the normalized complex order parameter $\psi(\mathbf{r}, t)=\Psi(\mathbf{r}, t)/|\Psi_0|$ and the sheet current density in the film $\mathbf{K}(\mathbf{r},t)=\mathbf{K}_s(\mathbf{r}, t)+\mathbf{K}_n(\mathbf{r}, t)$, where $\Psi_0$ is the zero-field value of the order parameter, $\mathbf{K}_s$ is the sheet supercurrent density, and $\mathbf{K}_n$ is the sheet normal current density [Figure~\ref{fig:squid-vortex}]. From $\mathbf{K}$, we can calculate the resulting magnetic flux through the SQUID pickup loop, $\Phi_\PL$ to obtain the mutual inductance signal, $M$.
+
+Because the film is much bigger than the SQUID field coil, and too large to model in its entirety, we model the geometry of the film as a square centered at the position of the SQUID with side length $L_\mathrm{film}=30\,\um$, which is approximately 10 times the outer radius of the field coil. In solving the TDGL model, we neglect the contribution of the induced currents in the film to the total magnetic vector potential in the film, i.e., we assume that the vector potential in the film is equal to $\mathbf{A}_\mathrm{applied}(\mathbf{r})$. This ``weak screening'' assumption is discussed further in Appendix~\ref{sec:tdgl}. These two approximations (modeling the film as a square with side length $L_\mathrm{film}$ and neglecting the induced vector potential) are likely to be the most significant sources of error in the modeling.
+
+An example of a TDGL simulation with a static field coil current is shown in Figure~\ref{fig:squid-vortex}. Before any vortices are induced, the Meissner supercurrent flows clockwise and the normalized superfluid density $n_s=|\psi|^2$ is suppressed below the field coil (top row, left column), with the largest suppression occurring where the applied magnetic vector potential is largest. In Figure~\ref{fig:squid-vortex}, the maximum applied field is just above the effective lower critical field of the film, $B_{c1}^\mathrm{eff}$, so a single vortex-antivortex pair is induced in the film near the edge of the field coil. Due to the Lorentz force (Eq.~\ref{eq:lorentz}), the vortex is pulled towards the center of the field coil and the antivortex is pushed away from the center of the field coil until it eventually exits the modeled domain, leaving a single isolated vortex in the vicinity of the SQUID.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/tdgl-sim-1.pdf}
+    \caption{{\bf Simulated complex magnetic response as a function of applied AC field strength.} Simulated time-dependent flux through the SQUID pickup loop $\Phi_\PL(\omega t)$ due to Meissner currents in the Nb film over one AC cycle, plotted as a function of ({\bf a}) dimensionless time $\omega t$ and ({\bf b}) SQUID field coil current $I_\FC(\omega t)=I_{\FC,\,\pk}\cos(\omega t)$. To allow any hysteresis to accumulate, data from the first half cycle ($0 \leq \omega t < \pi$) is discarded. The normalized field coil current $I_\FC(\omega t)/I_{\FC,\,\pk}$ is shown in gray in ({\bf a}). For clarity, we show only every fifth value of $I_{\FC,\,\pk}$ in ({\bf a}). The branches in ({\bf b}) correspond to different configurations of vortices near the SQUID field coil. For a given value of $I_{\FC,\,\pk}$, the system transitions between branches throughout the AC cycle, tracing out a hysteresis loop as shown in ({\bf f}). ({\bf c}) Real part and ({\bf d}) imaginary part of the complex magnetic response $M=M'+iM''$ as a function of $I_{\FC,\,\pk}$. The measurement at $T=9.37$ K is shown in blue and the simulation results are shown in black. ({\bf e}) Magnitude of the order parameter $|\psi(\mathbf{r})|$ at the peak of the AC cycle for selected values of the peak field coil current $I_{\FC,\,\pk}$, indicated by the colored bars in ({\bf c}, {\bf d}). ({\bf f}) Hysteresis loops, $\Phi_\PL$ vs. $I_{\FC}$, for the selected values of $I_{\FC,\,\pk}$ indicated by the colored bars in ({\bf c}, {\bf d}). As in Figure~\ref{fig:squid-vortex}, the simulation parameters are $\xi=0.9\,\um$, $\lambda=1.35\,\um$, and $z_0=0.5\,\um$.}
+    \label{fig:M-vs-Ifc-sim}
+\end{figure*}
+
+To simulate the low-frequency dynamics of the SQUID susceptometry measurement for a given peak field coil current $I_{\FC,\,\pk}$, we sample the AC field coil current (Eq.~\ref{eq:I_FC}) at a set of dimensionless times $\omega t_i$. At $\omega t_0=0$, we solve the TDGL model with the vector potential due to a field coil current $I_\FC(0)=I_{\FC,\,\pk}$, and with the initial condition $\psi(\mathbf{r}, 0)=1$, as in Figure~\ref{fig:squid-vortex}. Based on our quasistatic approximation, we allow the system to evolve until a steady-state is reached, then record the flux through the SQUID pickup loop, $\Phi_\PL(\omega t_i)$, due to the sheet current density $\mathbf{K}$ in the film. For all subsequent times, $\omega t_i$ with $i>0$,
+we set the initial state of the TDGL simulation to be the final state found in the previous time step, $\omega t_{i-1}$, then allow the system to evolve until a new steady-state is reached. The complex SQUID susceptibility signal $M=M'+iM''$ is then calculated using Eq.~\ref{eq:M-integral}. To allow any hysteresis to accumulate, we simulate one and a half AC cycles and calculate $M$ using only $\Phi_\PL$ from the last full cycle.
+
+The results of a TDGL simulation of the complex SQUID susceptibility signal $M$ are shown in Figure~\ref{fig:M-vs-Ifc-sim}. The top row shows the time-dependent flux through the pickup loop $\Phi_\PL(\omega t)$ due to the sheet current density in the film as a function of time [Figure~\ref{fig:M-vs-Ifc-sim}({\bf a})] and as a function of the instantaneous field coil current $I_\FC(\omega t)=I_{\FC,\,\pk}\cos(\omega t)$ [Figure~\ref{fig:M-vs-Ifc-sim}({\bf b})]. At the smallest values of the peak field coil current $I_{\FC,\,\pk}$, the magnetic response of the film is linear and non-hysteretic, so the flux through the  pickup loop due to the supercurrent in the film is $\Phi_\PL(\omega t)\propto -I_\FC(\omega t)$. As $I_{\FC,\,\pk}$ is increased, the film's response becomes nonlinear as the superfluid density is suppressed beneath the field coil, resulting in a ``squashed'' sinusoidal shape for $\Phi_\PL(\omega t)$. Although the magnetic response is nonlinear, it remains non-hysteretic until the peak applied field reaches the effective lower critical field of the film $B_{c1}^\mathrm{eff}$ around $I_{\FC,\,\pk}\approx 2.3\,\mathrm{mA}$, at which point a single vortex-antivortex pair is induced in the film during each half of the AC cycle.
+
+Figure~\ref{fig:M-vs-Ifc-sim}({\bf b}) shows the flux through the pickup loop as a function of the instantaneous field coil current over one AC cycle, which is analogous to a traditional magnetization-field ($M-H$) curve~\cite{Clem1994-qu}. The plot consists of many branches, corresponding to different configurations of vortices $N=(N_\mathrm{V}, N_\mathrm{aV})$ near the SQUID field coil, where $N_\mathrm{V}$ is the number of vortices and $N_\mathrm{aV}$ is the number of antivortices. The central $N=(0, 0)$ branch intersects the origin, and the slope of this branch at the origin, $\left.\partial\Phi_\PL/\partial I_\FC\right|_{I_\FC=0}$, is the quantity measured in a linear SQUID susceptometry measurement.
+% All of the $N\neq(0,0)$ curves are hysteretic due to pinning as described above.
+
+Figure~\ref{fig:M-vs-Ifc-sim}({\bf c}, {\bf d}) shows the simulated complex magnetic response $M=M'+iM''$ as a function of $I_{\FC,\,\pk}$ (black curves) and the corresponding measurement at $T=9.37$ K (blue curves). Each step in $M$ as a function of $I_{\FC,\,\pk}$ corresponds to a different time-dependent vortex configuration $N$, driven by a competition between the attractive vortex-antivortex interaction and the vortex-field coil interaction that tends to pull vortices towards the center of the field coil and push antivortices away from the center of the field coil. The magnitude of the order parameter $|\psi(\mathbf{r})|$ at the peak of the AC cycle for selected values of $I_{\FC,\,\pk}$ are shown in Figure~\ref{fig:M-vs-Ifc-sim}({\bf e}).
+
+As $I_{\FC,\,\pk}$ is increased from zero, the first three transitions are $N=(0, 0)\to(1, 0)\to(2,0)\to(3,0)$, where $N_\mathrm{aV}$ remains zero as the antivortices are pushed far away from the field coil and exit the film. At larger applied fields, the number of vortices beneath the field coil $N_\mathrm{V}$ increases, creating a potential well that traps a ring of $0<N_\mathrm{aV}<N_\mathrm{V}$ antivortices just outside the footprint of the field coil. Antivortices that are trapped in this potential well near the peak of the AC cycle [columns 4-9 of Figure~\ref{fig:M-vs-Ifc-sim}({\bf e})] annihilate with vortices trapped beneath the field coil when the applied field is reduced later in the AC cycle. Note that the steps in $M$ do not necessarily correspond to changes in the net number of vortices $(N_\mathrm{V}-N_\mathrm{aV})$ near the SQUID at the peak of the AC cycle.
+
+Figure~\ref{fig:M-vs-Ifc-sim}({\bf f}) shows hysteresis loops, $\Phi_\PL$ vs. $I_\FC$, for the same values of $I_{\FC,\,\pk}$ shown in Figure~\ref{fig:M-vs-Ifc-sim}({\bf e}). Throughout the AC cycle for a given $I_{\FC,\,\pk}$, the system transitions between branches in Figure~\ref{fig:M-vs-Ifc-sim}({\bf b}), tracing out a hysteresis loop whose area is related to the energy dissipated in the film per cycle (i.e., the work done on the film by the lock-in amplifier)~\cite{Clem1991-vq}. Loops that stay on the central $N=(0, 0)$ branch in Figure~\ref{fig:M-vs-Ifc-sim}({\bf b}) have zero area and are dissipationless.
+
+The model does not explicitly include any pinning centers (e.g. small defects in the film). However, within the framework outlined in Section~\ref{sec:ac-loss}, a vortex leaving the film as shown in Figure~\ref{fig:squid-vortex} is essentially a form of pinning. In the measurement, once the antivortex is pushed far from the field coil, it could leave the film as in the simulation (surface pinning), or become strongly pinned on a defect or annihilate with a vortex pinned elsewhere in the film (bulk pinning). In any of these cases, the antivortex is ``lost'' from the measurement, as it will never return to the vicinity of the SQUID or annihilate with its corresponding vortex. Once the antivortex is lost due to any of these pinning scenarios, the vortex is trapped below the field coil by the supercurrent screening the applied field, and it will remain trapped (metastably) even when the applied field is reduced below $B_{c1}^\mathrm{eff}$, leading to hysteresis in the film's AC magnetic response. This process, whereby one half of an induced vortex-antivortex pair is effectively lost from the measurement, is the origin of the step-like nonlinear magnetic response shown in Figure~\ref{fig:M-vs-Ifc}.
+
+% The disagreement between the model and measurements in the in-phase response $M'$ at low applied fields (when the film is in the $N=(0, 0)$ state) [Figure~\ref{fig:M-vs-Ifc-sim}({\bf c})] is most likely a result of the weak screening approximation. We expect that the model would more accurately capture SQUID susceptometry measurements of thinner (2D) superconductors, for which screening is weaker. Similarly, micron-scale thin film superconducting devices with lithographically-defined geometry could likely be modeled with higher fidelity than the large-area film we have studied here. The steps in $M$ are less sharp in the experiment than in the simulation, likely due to thermal fluctuations which are not included in the model.
+
+\subsection{Magnetic response near lithographically defined features}
+\label{sec:slot}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/susc_Tseries_scans-3.png}
+    \caption{{\bf Spatial maps of vortex dissipation around a lithographically defined slot.} ({\bf a}-{\bf e}) Scans of the measured in-phase and ({\bf f}-{\bf j}) out-of-phase components of the complex AC susceptibility $M = M'+iM''$ near a roughly $4\,\um$ wide slot at a series of temperatures close to $T_c$. At the lowest temperature ($T=9.25$ K), the AC susceptibiltiy is dominated by the superfluid response indicated by the strongly negative $M'$ ({\bf a}) and the nearly zero dissipative component $M''$ ({\bf f}). At higher temperatures, inhomogeneity in $M'$ appears around the slot accompanied by non-zero $M''$ due to vortex dynamics induced by the local applied AC field. The SQUID susceptometer is drawn to scale in ({\bf a}), and the scale bar in ({\bf a}) applies to all panels.}
+    \label{fig:SUSC_Tseries_scans}
+\end{figure*}
+
+We also imaged the local AC susceptibility near a lithographically defined defect, a slot of width $\sim4\,\um$, by raster scanning the SQUID in a plane parallel to and $\sim$300 nm above the Nb film. The drive frequency of the field coil was again fixed at $\omega/2\pi=500$ Hz with an amplitude of $I_{\FC,\,\pk} = 4\,\mA$.
+
+Figure \ref{fig:SUSC_Tseries_scans} shows susceptibility scans at a series of temperatures near $T_c$. At the lowest temperature, the Nb film around the slot is dominated by the superfluid response indicated by a strongly negative and spatially uniform $M'$
+[Figure~\ref{fig:SUSC_Tseries_scans}({\bf a})] and nearly zero dissipative ($M''$) response [Figure~\ref{fig:SUSC_Tseries_scans}({\bf f})]. As the temperature is increased towards $\Tc$, the superfluid response decreases towards zero [Figure~\ref{fig:SUSC_Tseries_scans}({\bf b}-{\bf e})] while a non-zero dissipative response nucleates near the edge of the slot and expands outwards with increasing temperature [Figure~\ref{fig:SUSC_Tseries_scans}({\bf g}-{\bf j})].
+% At the highest temperature (9.40 K), the entire scan region is non-superconducting indicated by $M\approx$  $0\,\Phi_0/\mathrm{A}$.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/squid-slot-top.png}
+    \caption{{\bf Simulation of vortex nucleation near a slot in the film.} The steady-state values of the magnitude of the order parameter $|\psi|$ ({\bf top row}) and the sheet current density $|\mathbf{K}|$ ({\bf bottom row}) are shown as a function of the relative position between the slot and the SQUID susceptometer. For this DC simulation, the parameters are $I_\mathrm{FC}=1.1\,\mA$, $\xi=0.9\,\um$, $\lambda=1.35\,\um$, and $z_0=0.5\,\um$. For this value of $I_\mathrm{FC}$, as the SQUID is scanned over the top edge of the slot, vortices are induced when the SQUID is near the corners of the slot, but not when the SQUID is near the center of the top edge. This result is consistent with Figure~\ref{fig:SUSC_Tseries_scans}({\bf b}, {\bf g}), where the dissipative signal first appears near the corners of the slot. As in Figures~\ref{fig:squid-vortex} \& \ref{fig:M-vs-Ifc-sim}, the modeled domain is a square with side length $L_\mathrm{film}=30\,\um$ centered at the center of the field coil, but for clarity only the central $20\,\um\times 20\,\um$ are shown. The slot is modeled with a width of $4\,\um$ and its corners are rounded with a radius of $1\,\um$. Each column corresponds to a different slot position relative to the SQUID.}
+    \label{fig:squid-slot-top}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{figures/slot-sim-cuts.png}
+    \caption{{\bf Vortex dynamics near a lithographically defined defect.} ({\bf a}) The top row shows the measured in-phase magnetic response near the slot at $T=9.25$ K, with $I_{\FC,\,\pk}=4$ mA. The dashed black lines indicate the location of line cuts of $M=M'+iM''$ shown as a function of temperature in the middle ($M'$) and bottom ($M''$) rows. The left column shows line cuts taken near the top of the slot and the right column shows line cuts taken several microns below the top of the slot. ({\bf b}) Simulated complex magnetic response as a function the relative position between the SQUID and the slot, which are drawn to scale in the top row. The dashed black lines indicate the location of line cuts of $M=M'+iM''$ shown as a function of $I_{\FC,\,\pk}$ in the middle ($M'$) and bottom ($M''$) rows. Again, left column shows simulated line cuts near the top of the slot and the right column shows line cuts several microns below the top of the slot, both as a function of the peak field coil current $I_{\FC,\,\pk}$. The parameters of the TDGL simulation are $\xi=0.9\,\um$, $\lambda=1.35\,\um$, and $z_0=0.5\,\um$.}
+    \label{fig:squid-slot-cuts}
+\end{figure*}
+
+The distinctive spatial dependence of $M$ in Figure~\ref{fig:SUSC_Tseries_scans} can be understood by considering that the surface energy barrier is lower than the barrier to generate a vortex-antivortex pair in the bulk. Thus, for a given field coil current, dissipation due to induced vortex dynamics occurs at a lower temperature when the field coil is near the edge of the slot. Given the rapid decrease in $\xi(T)$ with decreasing temperature near $\Tc$ and the technical requirement that granularity of the finite element mesh used to solve the TDGL model be small compared to $\xi(T)$, it is not computationally practical to use the methods described above to model the temperature dependence of $M$ as a function of position near the slot. Furthermore, treating the film as 2D and neglecting the induced vector potential both become worse approximations at lower temperature. Instead, to qualitatively investigate the spatial dependence of the magnetic response, we model the system at a fixed temperature (i.e., fixed values of $\xi$ and $\lambda$) and vary $I_{\FC,\,\pk}$ as a proxy for varying the temperature.
+
+Figure~\ref{fig:squid-slot-top} shows a TDGL simulation of the steady-state response of a superconducting film (with the same material parameters as in Figures~\ref{fig:squid-vortex} \& \ref{fig:M-vs-Ifc-sim}) to a DC current of $I_\mathrm{FC}=1.1\,\mA$ in the field coil as the SQUID is scanned across the top of a $4\,\um$ wide slot in the film. Although this value of $I_{\FC}$ is less than half the value of $I_{\FC,\,\pk}$ at which vortex dynamics begin to occur far from the film edge [Figure~\ref{fig:M-vs-Ifc-sim}], a vortex is induced in the film when the field coil is near the corners of the slot, where the surface energy barrier is reduced due to geometrical current crowding~\cite{Clem2011-ji}. In contrast to Figure~\ref{fig:M-vs-Ifc-sim}, the vortices in Figure~\ref{fig:squid-slot-top} nucleate at the superconductor-vacuum interface at the boundary of the slot and do not require a corresponding antivortex to be induced in the film. This result is consistent with the measurement shown in Figure~\ref{fig:SUSC_Tseries_scans}, where at $T=9.29$ K, a dissipative magnetic response first appears when the SQUID is near the corners of the slot [Figure~\ref{fig:SUSC_Tseries_scans}({\bf b}, {\bf g})].
+
+Figure~\ref{fig:squid-slot-cuts} shows line cuts through the slot of the measured $M(T)$ [Figure~\ref{fig:squid-slot-cuts}({\bf a})] and simulated $M(I_{\FC,\,\pk})$ [Figure~\ref{fig:squid-slot-cuts}({\bf b})]. The simulations qualitatively capture the spatial dependence of the dissipationless magnetic response [$T=9.25$ K in ({\bf a}) and $I_{\FC,\,\pk}=1.0$ mA in ({\bf b})] and the hysteretic response due to vortex dynamics [$T>9.25$ K in ({\bf a}) and $I_{\FC,\,\pk}>1.0$ mA in ({\bf b})]. When the SQUID is near the top of the slot, the magnetic response is roughly symmetric about the center of the slot. Vortex dynamics first begin to occur near the corners of the slot, with the spatial extent of the dissipative response widening with both increasing temperature and increasing AC field strength. When the SQUID is far from the top of the slot, the magnetic response is asymmetric about the center of the slot due to the geometry of the SQUID, and vortex dynamics begin to occur at a slightly higher temperature and higher AC field strength than when the SQUID is near the top of the slot. The measured $M(T)$ shows broadened features compared to the simulated $M(I_{\FC,\,\pk})$, likely due to thermal fluctuations or other stochastic effects.
+
+Although the comparison shown in Figure~\ref{fig:squid-slot-cuts} is only qualitative due to the technical limitations described above, measurements of $M(T)$ in mesoscopic thin film superconductors would be more amenable to more quantitative modeling, which could allow for self-consistent estimation of the temperature dependence of $\xi$, $\lambda$, and the vortex unbinding and surface free energy barriers.
+
+\section{Discussion}
+\label{sec:discussion}
+
+In this section, we discuss our results as they relate to previous theoretical, computational, and experimental studies of local induced vortex dynamics in thin films. Lemberger, \textit{et al.} developed a theory for the lower critical field of a large thin film where the magnetic field is applied by a small coil or point dipole at the center of the film~\cite{Lemberger2013-lu, Lemberger2013-ha}. They calculated the applied magnetic field at which a state with a single vortex-antivortex pair in the film has a lower free energy than a vortex-free state (that is, the thermodynamic critical field for a dipole-like source, $B_{c}^\mathrm{d}$)~\cite{Lemberger2013-lu}, and the maximum applied field for which a metastable vortex-free state exists, $B_0^\mathrm{crit} > B_{c}^\mathrm{d}$, which is the applied field above which vortices must be present in the film~\cite{Lemberger2013-ha}. The thermodynamic critical field in the strong screening limit for a point dipole field source was found to be
+\begin{equation}
+    B_{c}^\mathrm{d}=\frac{\sqrt{2}}{\rho_0}\frac{\Phi_0}{2\pi\Lambda}\ln\left(\frac{2\Lambda}{\xi}\right),
+    \label{eq:B0c1}
+\end{equation}
+where $\Lambda=\lambda^2/d$ and $\rho_0$ is the radial distance from the field source at which the applied field changes sign~\footnote{The strong and weak screening regimes are characterized by $\Lambda \ll \rho_0$ and $\Lambda \gg \rho_0$, respectively}. An approximation for $B_0^\mathrm{crit}$, again for a point dipole field source, which applies for both strong and weak screening, is given by
+\begin{equation}
+    B_0^\mathrm{crit}\approx\frac{\Phi_0}{2\pi\xi}\left(\frac{3\sqrt{6}}{\rho_0}+\frac{1}{2\Lambda}\right).
+    \label{eq:B0crit}
+\end{equation}
+Because of the free energy barrier for generating a vortex-antivortex pair, $B_{c}^\mathrm{d}$ is much smaller than the applied field at which vortices actually begin to appear. These values therefore provide bounds on the applied field $B_{c}^\mathrm{d} < B_{c1}^\mathrm{eff} < B_0^\mathrm{crit}$ at which a vortex-antivortex pair will be induced in the film, with the actual value of $B_{c1}^\mathrm{eff}$ being determined by the size of the vortex-antivortex unbinding barrier relative to the thermal energy $k_\mathrm{B}T$. In the case of an infinite film, the lowest energy vortex-bearing state was found to consist of a vortex near the field source and an antivortex far (but not infinitely far) from the field source~\cite{Lemberger2013-lu}.
+
+In our case, the magnetic field source is a small, asymmetric field coil rather than a point dipole, and the maximum value of the applied field for a given field coil current is $B_\mathrm{max}\approx 0.175\,\mT/\mA\times I_\FC$, and the applied field changes sign roughly at a distance $\rho_0\approx3\,\um$ from the center of the field coil. Using the same parameters as in the TDGL simulations above, $\lambda=1.35\,\um$ and $\xi=0.9\,\um$, we have $B_{c}^\mathrm{d}\approx0.05\,\mT$ and $B_0^\mathrm{crit}\approx0.9\,\mT$, whereas the first vortex-antivortex pair appears in our measurements and TDGL simulations at roughly an applied field of $0.175\,\mT/\mA\times 2.3\,\mA \approx 0.40\,\mT$. Thus, the bounds provided by Eqs.~\ref{eq:B0c1} and \ref{eq:B0crit} are rather loose.
+
+The depairing critical current density $J_c$ is the maximum dissipationless current density that a superconductor can stably support within Ginzburg-Landau theory, under the assumption that the superfluid density $|\Psi|^2$ and supercurrent density $\mathbf{J}_s$ are spatially uniform~\cite{Tinkham2004-ln}. In SI units, $J_c$ is given by
+\begin{equation}
+    J_c=\left(\frac{2}{3}\right)^{3/2}\frac{B_c}{\mu_0\lambda}=\frac{1}{3\sqrt{3}}\frac{\Phi_0}{\mu_0\pi\xi\lambda^2},
+    \label{eq:Jc-GL}
+\end{equation}
+where $B_c=\Phi_0/(2\sqrt{2}\pi\xi\lambda)$ is the thermodynamic critical field assuming a uniform applied field.
+% $J_c$ corresponds to a critical Cooper pair momentum $p_c=\hbar/(\sqrt{3}\xi)$~\cite{Lemberger2013-lu,Tinkham2004-ln}.
+For the parameters used in our TDGL simulation, this yields a depairing sheet current density of $J_cd\approx 12.3\,\uA/\um$. For the largest vortex-free field coil current in our simulation, $I_{\FC,\,\pk}=2.305\,\mA$, the maximum sheet current density in the film was $|\mathbf{K}|_\mathrm{max}=14.5\,\uA/\um$. There are two reasons that the simulated $|\mathbf{K}|_\mathrm{max}$ may exceed the depairing sheet current density $J_cd$. First, in the simulation we have neglected the induced vector potential due to Meissner currents in the film. For a given value of the applied vector potential, this approximation will lead to a slightly larger value of the Meissner supercurrent density than a fully self-consistent solution that takes the induced vector potential into account. Re-running the simulation at $I_{\FC,\,\pk}=2.305\,\mA$ with the induced vector potential included, we find $|\mathbf{K}|_\mathrm{max}=14.3\,\uA/\um$, so neglecting screening is not a large source of error in this case. Second, $J_c$ is derived assuming a spatially uniform superfluid density and supercurrent density~\cite{Tinkham2004-ln}, whereas both $|\Psi|^2$ and $\mathbf{J}_s$ are inhomogeneous for a local applied field just below the effective lower critical field. Nonetheless, our results suggest that the condition $|\mathbf{K}|_\mathrm{max}\approx J_cd$ provides a reasonable estimate for the maximum vortex-free sheet supercurrent density in thin films with a local magnetic field source, despite the highly inhomogeneous supercurrent distribution.
+
+In transport measurements of thin film type-II superconductors, especially those that are narrow transverse to the direction of current flow such as superconducting nanowire single photon detectors (SNSPDs), it is thought that finite resistance due to vortex motion first occurs when the supercurrent density at the edge exceeds the depairing current density $J_c$, causing vortices to nucleate at the edge and then travel into the bulk~\cite{Vodolazov2003-ya}. This process is likely dominated by defects at the edge~\cite{Cerbu2013-hr, Benfenati2020-mg, Bezuglyj2022-cm} or geometrical current crowding~\cite{Clem2011-ji, Clem2012-og, Berdiyorov2012-rn, Hortensius2012-op, Henrich2012-jm, Adami2013-ci, Ilin2014-od, Jonsson2022-mb} (for example at sharp corners), both of which lead to an inhomogeneous supercurrent distribution at the film edge. The result is that the measured spatially-averaged critical current density $I_c/(wd)$ (where $I_c$ is the transport critical current, $w$ is the film width, and $d$ is the film thickness) is far below the depairing current density. The same considerations apply to magnetic measurements where the field applied at the edge is non-vanishing, as demonstrated in Figures~\ref{fig:squid-slot-top} and \ref{fig:squid-slot-cuts}. Measuring the point at which a locally applied field generates a vortex-antivortex pair far from the edge, as we have done here, can provide a more direct probe of the intrinsic depairing current density.
+
+Our measurements are consistent with a scenario where, once the vortices have been generated, they are pushed tens of microns away from the field coil without becoming pinned on defects within the sensing area of the SQUID (i.e., the area where the Meissner current due to the field coil is non-vanishing), then exit the film or become pinned far from the SQUID. This is in contrast to an earlier computational study of vortex dynamics in AC susceptibility measurements~\cite{Lemberger2016-pb} in which a uniform density of strong pinning defects was assumed. SQUID susceptometry measurements of films with a higher density of pinning centers would likely show somewhat different nonlinear behavior, particularly if induced vortices have a large probability of becoming pinned within the sensing area of the SQUID.
+
+Previous scanning SQUID susceptometry measurements of a niobium film near its critical temperature showed telegraph-like fluctuations of the complex AC susceptibility as a function of time, with the magnitude of the fluctuations being consistent with a single flux quantum appearing or disappearing near the sensor~\cite{Wissberg2018-lq}. Scanning SQUID measurements performed on NbTiN films near the thickness-tuned superconductor-to-insulator transition showed similar telegraph-like fluctuations near ``puddles'' where the superfluid density or critical temperature was locally suppressed~\cite{Kremen2018-dp}. While the field coil current amplitude dependence of the fluctuations was not discussed in Refs.~\cite{Wissberg2018-lq, Kremen2018-dp}, these previous measurements can be viewed as a stochastic version of the present work, where the peak of the applied AC field is below the effective lower critical field and the vortex unbinding energy barrier is overcome at random by thermal fluctuations. Other methods for controllably generating vortex-antivortex pairs in superconducting thin films include locally heating the film while driving a transport current~\cite{Ge2017-wa} and coupling the film to a ferromagnetic structure~\cite{Gladilin2009-zl, Simmendinger2020-pv}.
+
+%The Helmholtz free energy of a vortex and antivortex separated by one coherence length $\xi$ in a thin film with effective penetration depth $\Lambda=\lambda^2/d$ is approximately equal to the free energy of two vortex cores: 
+% \begin{equation}
+%     U_{\mathrm{V-aV}}\approx\Phi_0^2/8\pi^2\mu_0\Lambda,
+% \end{equation}
+% where $\lambda$ is the London penetration depth and $d$ is the film thickness. Intuitively, this is because the circulating current and magnetic field associated with the vortex and antivortex essentially cancel everywhere in space, so only the cores contribute to the free energy.
+% The total free energy of an isolated vortex in an infinite film was found to be:
+% \begin{equation}
+%     U_\mathrm{V}\approx\frac{\Phi_0}{4\pi\mu_0\Lambda}\ln\left(\frac{2\Lambda}{\xi}\right).
+% \end{equation}
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this work, we have experimentally and computationally studied the dynamics of vortices in low-frequency AC susceptibility measurements of thin film superconductors where the field coil and pickup loop are of comparable size to the Ginzburg-Landau coherence length. The measurements reveal discrete steps in the complex magnetic response as a function of the strength of the applied AC field. Time-dependent Ginzburg-Landau simulations allow us to identify the dynamic behavior of a small number of induced vortex-antivortex pairs responsible for these steps.
+
+In future work, it would be preferable to measure films that are two-dimensional at all temperatures, i.e., films with thickness $d<\xi(0),\lambda(0)$, and to investigate more systematically the dependence of the induced vortex dynamics on the size/geometry of the superconductor and pinning centers. The TDGL model employed here (Appendix~\ref{sec:tdgl} and Ref.~\cite{Bishop-Van_Horn2023-dm}) allows for modeling pinning centers of various geometries in the form of holes or regions of reduced or vanishing $\Tc$, which could be engineered, for example, by ion irradiation~\cite{Massee2015-el, Aichner2019-zq} or by depositing superconducting islands on 2D normal metal or semiconducting substrates~\cite{Resnick1981-ow, Eley2011-id, Bottcher2018-fx, Naibert2021-ps, Bishop-Van_Horn2022-lr, Al_Luhaibi2022-cl}.
+
+Studying local induced vortex dynamics at higher frequencies, where the quasistatic approximation breaks down, would open up two new avenues for investigation. First, if we neglect viscous losses, the energy dissipated per AC cycle is frequency-independent, but the energy dissipated per unit time (i.e., the average dissipated power) grows linearly with frequency. At some point, self-heating due to vortex motion will cause additional nonlinearity and thermal hysteresis in the system. Second, at high enough frequencies, the viscous flux flow losses will become significant, making the vortex dynamics strongly frequency-dependent~\cite{Clem1991-vq}. One could also induce vortices with a DC current in the field coil and probe their dynamics with a smaller superimposed AC excitation.
+
+In summary, combining scanning SQUID susceptometry with detailed London-Maxwell and time-dependent Ginzburg-Landau modeling enables studies of low-frequency vortex dynamics in 2D superconductors resolved at the level of single vortices. Our results highlight the fact that the dynamics of vortices in AC susceptibility measurements of thin films can be sensitive to finite-size effects, even when the source of the applied field is much smaller than the film being measured. While finite-size effects can impact the dynamics of vortices after they have been generated, the process of inducing a vortex-antivortex pair with a locally applied field far from the edge is not sensitive to nonidealities of the edge. Therefore, our local approach is complementary to global AC susceptibility and transport measurements, as it allows one to investigate and/or minimize the impact of edge defects and spatial inhomogeneities in studies of vortex-related dissipation in thin film superconductors. Local measurements also allow one to map out dissipation due to vortex dynamics near defects and interfaces.
+
+\begin{acknowledgments}
+This work is supported by the Department of Energy, Office of Basic Energy Sciences, Division of Materials Sciences and Engineering, under contract DE-AC02-76SF00515. Some of the computing for this project was performed on the Sherlock cluster. We would like to thank Stanford University and the Stanford Research Computing Center for providing computational resources and support that contributed to these research results. We would like to thank John R. Kirtley for providing feedback on this manuscript. We acknowledge E. Track, M. Stoutimore, and V. Talanov of Northrop Grumman Mission Systems for providing samples for this work.
+\end{acknowledgments}
+
+\appendix
+
+\section{Data processing}
+\label{sec:data-processing}
+For the data presented in Figures~\ref{fig:M-vs-T} and \ref{fig:M-vs-Ifc}, we have subtracted the sample-independent SQUID mutual inductance $M_\infty$ and numerically corrected the lock-in amplifier phase. In practice, $M_\infty$, which we refer to as the ``field coil imbalance,'' is nonzero due to minor lithographic imperfections in the SQUID chip. The typical magnitude of the field coil imbalance is a few percent of the mutual inductance of a single field coil-pickup loop pair.
+
+To correct the lock-in amplifier phase starting with the raw complex mutual inductance $M_0=M_0'+iM_0''$, we fit $M_0''(T)$ vs. $M_0'(T)$ measured with $I_{\FC,\,\pk}=0.5\,\mA$ [black points in Figure~\ref{fig:M-vs-T}] for $9\,\mathrm{K}\leq T\leq 9.3\,\mathrm{K}$ to a linear model, $M_0''=aM_0' + b$, calculate the angle $\alpha=\arctan(a)$, and define a rotated mutual inductance according to $M_1=M_0e^{-i\alpha}$. This temperature range is chosen because there is a large change in $|M_0|$ over this range, but no significant nonlinearity or evidence of vortex dynamics. After rotation, the out-of-phase component $\Im(M_1)$ is consistent with Gaussian noise over this temperature range, indicating that the nonzero $\mathrm{Im}(M_0)$ was indeed due to an offset in the lock-in amplifier phase and not an actual dissipative response. We then calculate $M_\infty$ by taking the mean of $M_1(T)$ for $T\geq 9.4\,\mathrm{K}$, which is well above $\Tc$ where the sample has no magnetic response, and define $M_2=M_1-M_\infty=M_0e^{-i\alpha}-M_\infty$, which is the quantity plotted in the main text.
+% We find $\alpha=-9.76\times10^{-3}\,\mathrm{radians}$ and $M_\infty=(5.49-i0.39)\,\Phi_0/\mathrm{A}$. One would expect $M_\infty$ to be purely real. The small imaginary part may be the result of the finite bandwidth of the SQUID flux-locked loop readout.
+The same values of $\alpha$ and $M_\infty$, found from the $I_{\FC,\,\pk}=0.5\,\mA$ dataset, are applied to all curves shown in Figures~\ref{fig:M-vs-T} and \ref{fig:M-vs-Ifc}, which were measured in the same cooldown.
+
+The same process was applied for the data shown in Figures~\ref{fig:SUSC_Tseries_scans} and \ref{fig:squid-slot-cuts}, which were acquired in a different cooldown. The phase offset $\alpha=\arctan(a)$ was found by fitting the raw data measured at $T=9.25$ K pixel-wise to a linear model, $M_0''=aM_0' + b$, where again this dataset was chosen because there was no evidence of nonlinearity or dissipation [Figure~\ref{fig:SUSC_Tseries_scans}({\bf a})]. $M_\infty$ was found by taking the mean of $M$ over a scan measured at $T=9.7$ K, well above the film's critical temperature. For data from both cooldowns, the phase offset $\alpha$ is found to be $<0.01$ radians.
+
+\section{London-Maxwell modeling}
+\label{sec:london-maxwell}
+
+Throughout the measurements, the SQUID susceptometer is kept far below its critical temperature, and the current through the field coil kept far below the critical current of the field coil. In this regime, each layer of the multi-layer superconducting structure of the SQUID responds linearly and non-dissipatively to the applied field coil current, as described by the second London equation,
+\begin{equation}
+    \label{eq:london-3d}
+    \mathbf{H}(\mathbf{r})=-\lambda^2\nabla\times\mathbf{J}_s(\mathbf{r}),
+\end{equation}
+where $\mathbf{H}$ is the magnetic field in the superconductor and $\mathbf{J}_s$ is the supercurrent density. $\mathbf{H}$ is a sum of the applied magnetic field and the magnetic field due to Meissner screening currents. If $\lambda(T)\gg d$, where $d$ is the film thickness, one can re-write Eq.~\ref{eq:london-3d} in a two-dimensional form in terms of the effective magnetic screening length $\Lambda(T)=\lambda^2(T)/d$ and the thickness-integrated sheet supercurrent density $\mathbf{K}_s=d\mathbf{J}_s$:
+\begin{equation}
+    \label{eq:london-2d}
+    \mathbf{H}(\mathbf{r})=-\Lambda\nabla\times\mathbf{K}_s(\mathbf{r}),
+\end{equation}
+where we assume that the layer lies parallel to the $x-y$ plane so that $\mathbf{K}_s$ has only $x$- and $y$-components, and only the $z$-component of $\mathbf{H}$ is relevant. Because the sheet supercurrent density is divergenceless, $\nabla\cdot\mathbf{K}_s=0$, we can define a scalar ``stream function'' $g(x, y)$ satisfying
+\begin{equation}
+    \label{eq:stream}
+    \mathbf{K}_s=-\hat{\mathbf{z}}\times\nabla g=\nabla\times(g\hat{\mathbf{z}}).
+\end{equation}
+This allows us to represent Eq.~\ref{eq:london-2d} as a Poisson equation for $g$:
+\begin{equation}
+    \label{eq:london-poisson}
+    \mathbf{H}(x, y)=\Lambda\nabla^2g(x, y)\hat{\mathbf{z}}.
+\end{equation}
+We use the open-source Python package \texttt{SuperScreen}~\cite{Bishop-Van_Horn2022-sy} to solve Eq.~\ref{eq:london-poisson} using the method introduced in Ref.~\cite{Brandt2005-wj}. The method can be applied to 2D films of any shape, including films with holes, and for any value of the effective screening length, $0\leq\Lambda<\infty$.
+
+% We define a model that consists of four thin film superconducting layers: the niobium film plus the three niobium wiring layers of the SQUID susceptometer. We can then simulate, for a given value of $\Lambda$ in the film, the response of the entire structure to a current $I_\FC$ flowing in the field coil. The response of all four layers is found self-consistently by iteratively updating the magnetic field applied to each layer based on the Biot-Savart field from the supercurrent flowing in the other layers~\cite{Bishop-Van_Horn2022-sy,Kirtley2016-gt}. Once a self-consistent solution has been found, we can evaluate the flux through the SQUID pickup loop, $\Phi_\PL$, to find the in-phase mutual inductance $M'=(\Phi_\PL-\Phi_\PL^\infty)/I_\FC$, where $\Phi_\PL^\infty$ is the mutual inductance when the sample's effective screening length is set to a very large value, $\Lambda\to\infty$, resulting in no screening by the sample.
+
+To calculate the vector potential $\mathbf{A}(\mathbf{r})$ applied to the film by the SQUID susceptometer [Figure~\ref{fig:squid}({\bf c})], we define a model containing the three niobium wiring layers of the SQUID susceptometer. We can then simulate the response of the entire structure to a current $I_\FC$ flowing in the field coil. The response of all three layers is found self-consistently by iteratively updating the magnetic field applied to each layer based on the Biot-Savart field from the supercurrent flowing in the other layers~\cite{Bishop-Van_Horn2022-sy,Kirtley2016-gt}. Once a self-consistent solution has been found, we can evaluate the magnetic vector potential anywhere in space (in the Lorenz gauge):
+\begin{equation}
+    \label{eq:A-lorenz}
+    \mathbf{A}(\mathbf{r})=\sum_{\text{layers }\ell}\frac{\mu_0}{4\pi}\int_{\ell}\frac{\mathbf{K}_{s,\ell}(\mathbf{r}')}{|\mathbf{r}-\mathbf{r}'|}\mathrm{d}x'\mathrm{d}y',
+\end{equation}
+where $\mathbf{K}_{s,\ell}$ is the sheet supercurrent density in wiring layer $\ell$, $\mathbf{r}'=(x', y', z_\ell)$ is the position inside the superconductor in layer $\ell$, and $z_\ell$ is the vertical position of the layer. The results of this calculation are shown in Figure~\ref{fig:squid}({\bf c}). The same multi-layer model of the SQUID [Figure~\ref{fig:squid}({\bf a})] is used to evaluate the flux through the pickup loop $\Phi_\PL$ due to the sheet current density $\mathbf{K}$ flowing in the sample, which is calculated using the TDGL model described in Appendix~\ref{sec:tdgl}. The three niobium wiring layers of the SQUID have $\lambda(T_\mathrm{SQUID})\approx d$, where $T_\mathrm{SQUID}\approx 5\,\mathrm{K}$ is the temperature of the SQUID during the measurement, so they don't satisfy the condition $\lambda(T) \gg d$. Despite this limitation, this 2D London-Maxwell model has proven effective in modeling the magnetic response of SQUID susceptometers~\cite{Kirtley2016-gt, Kirtley2016-zz, Bishop-Van_Horn2022-sy}.
+
+% \section{Estimating $\Tc$ and $\lambda(T)$}
+% \label{sec:estimate-tc}
+
+% To analyze the measured magnetic response near $\Tc$, we begin by attempting to pin down the values of the parameters $\lambda(T)$, $\Tc$, and $z_0$. We can estimate all three parameters by performing least-squares fit of $M'$ vs. $T$ [Figure~\ref{fig:M-vs-T}({\bf a})] to a model in which we simulate the superfluid response of the sample by self-consistently solving the 2D London equation in the film and in the three superconducting layers of the SQUID susceptometer (see Appendix~\ref{sec:london-maxwell} and Ref.~\cite{Bishop-Van_Horn2022-sy} for more details). We assume the following phenomenological temperature dependence for $\lambda$:
+% \begin{equation}
+%     \label{eq:lambda-T}
+%     \lambda(T)=\frac{\lambda(0)}{\sqrt{1-(T/\Tc)^a}}.
+% \end{equation}
+% Eq.~\ref{eq:lambda-T} with exponent $a=4$ is the temperature dependence predicted by the Gorter-Casimir two-fluid model~\cite{Gorter1955-ip}, whereas $a=2$ is sometimes found to be in better agreement with measurements of $\lambda(T)$, and Ginzburg-Landau theory predicts $a=1$ in the limit $T/\Tc \to 1$~\cite{Tinkham2004-ln}. To work around this ambiguity, we performed the fit with all three values of the exponent, $a=1$, 2, and 4. In all cases, $\lambda(0)$, $\Tc$, and $z_0$ were taken as free parameters. We only fit data taken at temperatures $T\geq9\,\mathrm{K}$ because below this temperature, $\lambda(T)<d$ and the film cannot be reliably modeled as two-dimensional. We also excluded from the fit all data taken at temperatures above $9.35\,\mathrm{K}$, where nonlinearity due to vortex dynamics is clearly visible even at the lowest field coil current, $I_{\FC,\,\pk}=0.5$ mA.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\linewidth]{figures/M-vs-T-fit.pdf}
+%     \caption{{\bf Method for estimating $\Tc$, $\lambda(T)$, and $z_0$.} ({\bf a})~Temperature dependence of $M'$ measured with $I_{\FC,\,\pk}=0.5$ mA (black dots), and simulated using the model described in the text, with $\lambda(T)$ given by Eq.~\ref{eq:lambda-T} (colored lines). The simulated results for $a=1$, 2, and 4 are indistinguishable, so only the $a=4$ result (orange) is visible. The inset shows an enlarged view near $\Tc$, highlighting the onset of vortex dynamics, which is not captured by the London model. The dashed vertical line shows the extracted $\Tc=9.389\,\mathrm{K}$. ({\bf b})~The inferred London penetration depth, $\lambda(T)$ for the three models. Although the fits for $a=1$, 2, and 4 result in different estimates for $\lambda(0)$, the inferred values for $\lambda(T)$ are indistinguishable in the temperature range of interest, and the best-fit values for $\Tc$ and $z_0$ (shown in the figure legend) are consistent between the three models.}
+%     \label{fig:M-vs-T-fit}
+% \end{figure}
+
+% The results of the three least-squares fits using this technique, applied to $M'(T)$ measured at $I_{\FC,\,\pk}=0.5$ mA, are shown in Figure~\ref{fig:M-vs-T-fit}. The three models, with $a=1$, 2, and 4, result in different best-fit estimates for the zero-temperature London penetration depth, $\lambda(0)$, however the models all reproduce the measured $\lambda(T)$ in the temperature range of interest [Figure~\ref{fig:M-vs-T-fit}({\bf a})]. The best-fit values for the critical temperature are nearly identical between the three models ($\Tc=9.389$ K) and the best-fit values for the sensor/sample spacing $z_0$ agree to within 4\%. As shown in Figure~\ref{fig:M-vs-T-fit}({\bf b}), the three models result in nearly identical temperature dependence for the London penetration depth $\lambda(T)$ (given by Eq.~\ref{eq:lambda-T}) in the temperature range of interest, $9\,\mathrm{K}\leq T < \Tc$. Thus, in this temperature range, there is a single curve $\lambda(T)$ and set of parameters $\{\Tc,z_0\}$ that are consistent with the measured $M'(T)$. Based on this, in the analysis that follows, we will assume $\Tc=9.389$ K, $z_0=0.69\,\um$, and that above $T=9$ K, $\lambda$ has the temperature dependence shown in Figure~\ref{fig:M-vs-T-fit}({\bf b}).
+
+% Although more computationally intensive than the traditional method for inferring $\lambda$ from scanning SQUID susceptometry measurements~\cite{Kirtley2012-od}, which involves an analytical model for $M'$ as a function of $\lambda$ and the effective sensor-sample standoff $z$, the method described above may result in smaller systematic uncertainty in the inferred penetration depth for the following two reasons. First, the analytical model assumes that the field coil and pickup loop are concentric and coplanar one-dimensional circular loops, whereas they actually have a complicated geometry [Figure~\ref{fig:squid}({\bf a})] and lie in different planes above the sample surface. Second, the sensor-sample standoff is difficult to calibrate \textit{in situ}. The sensor-sample standoff $z$ is controlled by applying a voltage $V_z$ to a piezoelectric actuator and within the analytical model, the sensor-sample standoff is assumed to be linear, $\Delta z(\Delta V_z)=\mathrm{d}z/\mathrm{d}V_z\times\Delta V_z$. In practice, $\Delta z(\Delta V_z)$ may not be linear and, even if it is, the constant $\mathrm{d}z/\mathrm{d}V_z$ is difficult to calibrate. $z$ also has a minimum value $z_\mathrm{min}>0$ corresponding to when the first point of the SQUID chip comes into contact with the sample, which is also difficult to calibrate and will vary between measurements depending on the exact alignment of the sensor and sample. These systematic errors are discussed in details in Refs.~\cite{Bert2012-jx, Bert2012-wh}.
+
+\section{Time-dependent Ginzburg-Landau modeling}
+\label{sec:tdgl}
+
+To model the nucleation and dynamics of vortices in the niobium film, we use a generalized time-dependent Ginzburg-Landau approach introduced in Refs.~\cite{Kramer1978-kb, Watts-Tobin1981-mn}. The theory is an extension of the time-dependent Ginzburg-Landau theory first developed by Schmid~\cite{Schmid1966-bh} and Gor'kov~\cite{Gorkov1996-do}. The generalized version includes the effect of inelastic electron-phonon scattering, the strength of which is characterized by a parameter $\gamma=2\tau_E\Delta_0$, where $\tau_E$ is the inelastic scattering time and $\Delta_0$ is the zero-field
+superconducting gap. This extension makes the theory applicable to gapless superconductors ($\gamma=0$) or dirty gapped superconductors ($\gamma > 0$) where the inelastic diffusion length is much smaller than the coherence length $\xi$~\cite{Kopnin2001-ip}. $\gamma$ essentially characterizes the viscosity for vortex motion in the superconductor~\cite{Jelic2016-ww}, so one would expect $\gamma$ to be relevant to high-frequency viscous flux flow losses, but not to the low-frequency pinning-related losses observed in this work. We have confirmed that the simulated low-frequency dynamics are not sensitive to the value of $\gamma$, and for the simulations presented in the main text, we set $\gamma=1$.
+
+In practice, the model~\cite{Kramer1978-kb,Watts-Tobin1981-mn} boils down to a set of coupled partial differential equations for the complex order parameter of the condensate and the electric scalar potential. In dimensionless units, the equations read:
+\begin{equation}
+    \label{eq:tdgl-psi}
+    \begin{split}
+    &\frac{u}{\sqrt{1+\gamma^2|\psi|^2}}\left(\frac{\partial}{\partial t} + i\mu + \frac{\gamma^2}{2}\frac{\partial |\psi|^2}{\partial t}\right)\psi\\
+    &=\left(\epsilon-|\psi|^2\right)\psi + (\nabla-i\vec{A})^2\psi
+    \end{split}
+\end{equation}
+\begin{equation}
+    \label{tdgl-poisson}
+    \begin{split}
+        \nabla^2\mu &= \nabla\cdot\mathrm{Im}[\psi^*(\nabla-i\mathbf{A})\psi]\\
+        &=\nabla\cdot\mathbf{J}_s
+    \end{split}
+\end{equation}
+$\psi(\mathbf{r}, t)=\Psi(\mathbf{r}, t)/|\Psi_0|$ is the normalized order parameter, where $\Psi_0$ is the zero-field value of the order parameter. $\mu(\mathbf{r}, t)$ is the electric scalar potential, $\mathbf{A}$ is the magnetic vector potential in the superconductor, and $\mathbf{J}_s$ is the supercurrent density. The real-valued parameter $\epsilon(\mathbf{r})=T_c(\mathbf{r})/T - 1 \in [-1,1]$ adjusts the local critical temperature of the film~\cite{Kwok2016-of,Al_Luhaibi2022-cl,Sadovskyy2015-ha}. For all simulations shown here, we fix $\epsilon(\mathbf{r})=1$. Setting $\epsilon(\mathbf{r}) < 1$ suppresses the critical temperature at position $\mathbf{r}$, and extended regions of $\epsilon(\mathbf{r}) < 0$ can be used to model large-scale metallic pinning sites~\cite{Kwok2016-of}. The constant $u=\pi^4/14\zeta(3)\approx5.79$ is the ratio of relaxation times for the amplitude and phase of the order parameter in dirty superconductors, where $\zeta(x)$ is the Riemann zeta function~\cite{Kopnin2001-ip}. Distance is measured in units of the coherence length $\xi=\xi(T)$. The magnetic vector potential $\mathbf{A}$ is measured in units of $A_0=\xi B_{c2}$, where $B_{c2}=\Phi_0/(2\pi\xi^2)$ is the upper critical field. The sheet supercurrent density $\vec{K}_s=d\vec{J}_s$ and sheet normal current density $\vec{K}_n=d\mathbf{J}_n=d\sigma\vec{\nabla}\mu$ are measured in units of $K_0=4\xi B_{c2}/(\mu_0\Lambda)$, where $\sigma$ is the normal state conductivity of the superconductor and $\Lambda=\lambda^2/d$ is the effective screening length. The electric potential $\mu$ is measured in units of 
+$V_0=4\xi^2 B_{c2}/(\mu_0\sigma\lambda^2)$, and time is measured in units of $\tau_0=\mu_0\sigma\lambda^2$.
+
+Isolating boundary conditions are enforced on superconductor-vacuum interfaces (such as the film edge and the boundary of the slot in Figure~\ref{fig:squid-slot-top}), in the form of Neumann boundary conditions for $\psi$ and $\mu$:
+\begin{subequations}
+    \label{eq:bc-vacuum}
+    \begin{align}
+        \hat{\mathbf{n}}\cdot(\nabla-i\mathbf{A})\psi &= 0\label{eq:bc-vacuum-psi}\\
+        \hat{\mathbf{n}}\cdot\nabla\mu &= 0\label{eq:bc-vacuum-mu},
+    \end{align}
+\end{subequations}
+where $\hat{\mathbf{n}}$ is a unit vector normal to the interface.
+
+We solve Eqs.~\ref{eq:tdgl-psi} and \ref{tdgl-poisson} on a triangular mesh in two dimensions using the open-source Python package \texttt{pyTDGL}~\cite{Bishop-Van_Horn2023-dm}. The implementation of \texttt{pyTDGL} is based on Refs.~\cite{Jonsson2022-mb, Jonsson2022-xe, Gropp1996-uw, Du1998-kt}. In the analysis presented above, we neglect screening when solving the TDGL model, meaning that we assume the magnetic vector potential in the film is equal to the applied magnetic vector potential, neglecting the induced vector potential due to currents flowing in the film: $\mathbf{A}=\mathbf{A}_\mathrm{applied} + \mathbf{A}_\mathrm{induced}\approx\mathbf{A}_\mathrm{applied}$. Here, $\mathbf{A}_\mathrm{applied}(\mathbf{r})$ is the vector potential from the SQUID susceptometer field coil [Figure~\ref{fig:squid}({\bf c})]. This approximation is easily justified when the effective screening length $\Lambda(T)=\lambda(T)^2/d$ is large compared to either the size of the film or the size of the magnetic source (in our case, the SQUID field coil)~\cite{Tinkham2004-ln, Lemberger2013-lu}. The latter condition is approximately satisfied for the highest temperature at which the simulation was performed, $T=9.37\,\mathrm{K} \approx 0.998\,\Tc$, but will be a source of error at lower temperatures, where $\lambda(T)$ is shorter. It is in principle possible to include screening using \texttt{pyTDGL}, but the added computational cost makes it impractical for the simulations presented in this work.
+
+% \nocite{*}
+\bibliography{references.bib}
+
+\end{document}
