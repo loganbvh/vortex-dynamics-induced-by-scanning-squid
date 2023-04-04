@@ -21,9 +21,9 @@
     - All other subdirectories: simulation results for figure 8 (see `notebooks/figure-6-and-8.ipynb` and below).
 - `notebooks/`: Jupyter notebooks used to generate the figures.
 
-## `figure5-videos`
+## Animations for Figure 5
 
-This directory contains 201 `mp4` files, each of which shows the full time dynamics of the system over 1.5 AC cycles for a different value of the peak field coil current.
+The directory `data/simulation/figure5-videos/` contains 201 `mp4` files, each of which shows the full time dynamics of the system over 1.5 AC cycles for a different value of the peak field coil current.
 
 The files are named like `merged-{i}.mp4`, where `i=0..200` is an index into the array of peak field coil current values given by `I_fc_pks = numpy.linspace(0.5, 10, 201)`. Each video is a concatenation of 76 TDGL simulations, one for each sample of the applied AC field over 1.5 cycles. The samples are given by
 
