@@ -48,7 +48,7 @@ skip = int(0.5 * points_per_cycle)
 
 For each value of the peak field coil current, the first sample of the AC cycle `omega_t == 0` is simulated with the initial condition that the order parameter is 1 everywhere and no current is flowing. The system is allowed to evolve for a total time `\tau = 2e4 \times \tau_0`. For all subsequent samples, the initial state of the system is taken to be the final state of the previous sample and the evolution time is shortened to `\tau = 2e3 \times \tau_0`. The setup is detailed in the figure below. "Index" refers to an index into the array `fc_current_i`, which is labeled in the upper left corner of each video.
 
-![Simulation schematic](./simulation/ac-cycle.png)
+![Simulation schematic](./ac-cycle.png)
 
 Note that the TDGL model is solved using a variable time step, so the animations do not have a constant frame rate. The x and y axes are shown in units of the coherence length `\xi = 0.9 microns` and the color scales are in dimensionless units.
 
