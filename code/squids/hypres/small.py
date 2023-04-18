@@ -23,7 +23,7 @@ def make_polygons():
     return sc_polygons, sc_holes, sc_abstract
 
 
-def make_squid(align_layers: str = "top"):
+def make_squid(align_layers: str = "bottom"):
     polygons, holes, abstract_regions = make_polygons()
     layers = hypres_squid_layers(align=align_layers)
     layer_mapping = {
@@ -36,10 +36,10 @@ def make_squid(align_layers: str = "top"):
     }
     for name, poly in polygons.items():
         poly.layer = layer_mapping[name]
-        poly.points = poly.resample(201)
+        poly.points = poly.resample(151)
     for name, poly in holes.items():
         poly.layer = layer_mapping[name]
-        poly.points = poly.resample(201)
+        poly.points = poly.resample(151)
     bbox = abstract_regions["bounding_box"]
     bounding_box = sc.Polygon("bounding_box", layer="BE", points=bbox)
     return sc.Device(
