@@ -24,7 +24,7 @@ def hypres_squid_layers(
         z0: The vertical position of the bottom of W2, i.e. the surface of the
             SQUID chip.
         d_BE, d_I1, d_W1, d_I2, d_W2: Layer thicknesses in microns. Note that in the GDS
-            files, these are referred to as MN1, IN1, M0, I0, and M1 (I think).
+            files, these are referred to as MN1, IN1, M0, I0, and M1.
 
     Returns:
         A list a Layer objects representing the SQUID wiring layers.
