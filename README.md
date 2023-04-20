@@ -53,20 +53,20 @@ For each value of the peak field coil current, the first sample of the AC cycle 
 
 Note that the TDGL model is solved using a variable time step, so the animations do not have a constant frame rate. The x and y axes are shown in units of the coherence length `\xi = 0.9 microns` and the color scales are in dimensionless units.
 
-## Data for Figure 8(b)
+## Data for Figure 8(g-l)
 
-The mapping of directory names to datasets for Figure 8(b) is given below. The float keys are peak field coil current in mA and the strings refer to subdirectories of `/data/simulation/`.
+The mapping of directory names to datasets for Figure 8(g-l) is given below. The float keys are peak field coil current in mA and the strings refer to subdirectories of `/data/simulation/`.
 
 ```python
 fc_current_to_directory = {
-    "top_of_slot": {  # Figure 8(b), left column
+    "top_of_slot": {  # Figure 8(g, h, i), left column
         1.0: "11376733",
         1.1: "11204356",
         1.25: "11390305",
         1.5: "11280881",
         1.75: "11390289",
     },
-    "middle_of_slot": {  # Figure 8(b), right column
+    "middle_of_slot": {  # Figure 8(j, k, l), right column
         1.0: "11376781",
         1.1: "11233444",
         1.25: "11390407",
