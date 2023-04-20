@@ -1,5 +1,9 @@
 # Vortex dynamics induced by scanning SQUID susceptometry
 
+## Depedencies
+- [`superscreen`](https://github.com/loganbvh/superscreen) version [`0.8.1`](https://pypi.org/project/superscreen/0.8.1/)
+- [`tdgl`](https://github.com/loganbvh/py-tdgl) version [`0.2.1`](https://pypi.org/project/tdgl/0.2.1/)
+
 ## Contents
 - `code/`
   - `scripts/`
