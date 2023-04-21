@@ -1,0 +1,2 @@
+superscreen==0.8.1
+tdgl==0.2.1
