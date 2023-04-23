@@ -35,5 +35,5 @@ python squid_susc_fc_ac.py \
     --gamma=1 \
     --solve-time 500 500 \
     --dt-init=1e-6 \
-    --save-every=50 \
+    --save-every=100 \
     --seed-solutions
