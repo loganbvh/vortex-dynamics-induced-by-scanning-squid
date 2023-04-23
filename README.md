@@ -1,6 +1,6 @@
 # Vortex dynamics induced by scanning SQUID susceptometry
 
-![Vortex dynamics](dynamics.webp)
+![Vortex dynamics](data/dynamics.webp)
 
 ## Depedencies
 - [`superscreen`](https://github.com/loganbvh/superscreen) version [`0.8.1`](https://pypi.org/project/superscreen/0.8.1/)
