@@ -33,7 +33,7 @@ python squid_susc_fc_ac.py \
     --lam=1.35 \
     --xi=0.9 \
     --gamma=1 \
-    --solve-time 10000 1250 \
+    --solve-time 500 500 \
     --dt-init=1e-6 \
-    --save-every=250 \
+    --save-every=50 \
     --seed-solutions
