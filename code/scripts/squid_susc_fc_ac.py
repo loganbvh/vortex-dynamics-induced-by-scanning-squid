@@ -710,7 +710,7 @@ def main():
             args.film_smooth,
             args.slot_size,
             slot_top_center,
-            args.slot_radius,
+            slot_radius=args.slot_radius,
             max_edge_length=args.max_edge_length,
             shape=args.film_shape,
         )

@@ -26,13 +26,13 @@ cp -u $0 $outdir/
 python $pyscript \
     --directory=$outdir/$SLURM_ARRAY_TASK_ID \
     --I_fc 2 \
-    --slot-size 4 30 \
-    --slot-radius=1 \
+    --slot-size 2 50 \
+    --slot-radius=0.1 \
     --slot-top-center-x -6 6 $SLURM_ARRAY_TASK_COUNT \
     --slot-top-center-y 0 0 $SLURM_ARRAY_TASK_COUNT \
     --index=$SLURM_ARRAY_TASK_ID \
     --squid-type=hypres-small \
-    --squid-position 0 0 1 \
+    --squid-position 0 0 0.5 \
     --squid-points=4000 \
     --squid-smooth=100 \
     --squid-iterations=5 \
