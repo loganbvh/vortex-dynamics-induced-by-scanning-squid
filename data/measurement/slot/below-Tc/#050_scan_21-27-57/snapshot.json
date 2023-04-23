@@ -1,0 +1,1751 @@
+{
+    "station": {
+        "instruments": {
+            "atto": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "instruments.atto.ANC300",
+                "parameters": {
+                    "timeout": {
+                        "value": 5.0,
+                        "ts": "2019-10-26 21:12:45",
+                        "raw_value": 5.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_timeout",
+                        "post_delay": 0,
+                        "unit": "s",
+                        "inter_delay": 0,
+                        "label": "timeout",
+                        "vals": "<MultiType: Numbers v>=0, Enum: {None}>",
+                        "name": "timeout",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "version": {
+                        "value": "ver",
+                        "ts": "2019-10-25 15:08:00",
+                        "raw_value": "ver",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_version",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Version",
+                        "name": "version",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "serialnum": {
+                        "value": "getcser",
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": "getcser",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_serialnum",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Controller serial number",
+                        "name": "serialnum",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "serialnum_ax1": {
+                        "value": "getser 1",
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": "getser 1",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_serialnum_ax1",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "x axis serial number",
+                        "name": "serialnum_ax1",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "mode_ax1": {
+                        "value": "gnd",
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": "gnd",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_mode_ax1",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "x axis mode",
+                        "vals": "<Enum: {'inp', 'stp-', 'stp', 'gnd', 'cap', 'off', 'stp+'}>",
+                        "name": "mode_ax1",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "voltage_ax1": {
+                        "value": 30,
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": 30,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_voltage_ax1",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "x axis voltage",
+                        "vals": "<Numbers 0<=v<=30>",
+                        "name": "voltage_ax1",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "freq_ax1": {
+                        "value": 100,
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": 100,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_freq_ax1",
+                        "post_delay": 0,
+                        "unit": "Hz",
+                        "inter_delay": 0,
+                        "label": "x axis frequency",
+                        "vals": "<Numbers 1<=v<=10000>",
+                        "name": "freq_ax1",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "cap_ax1": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_cap_ax1",
+                        "post_delay": 0,
+                        "unit": "nF",
+                        "inter_delay": 0,
+                        "label": "x axis capacitance",
+                        "name": "cap_ax1",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "serialnum_ax2": {
+                        "value": "getser 2",
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": "getser 2",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_serialnum_ax2",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "y axis serial number",
+                        "name": "serialnum_ax2",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "mode_ax2": {
+                        "value": "gnd",
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": "gnd",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_mode_ax2",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "y axis mode",
+                        "vals": "<Enum: {'inp', 'stp-', 'stp', 'gnd', 'cap', 'off', 'stp+'}>",
+                        "name": "mode_ax2",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "voltage_ax2": {
+                        "value": 30,
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": 30,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_voltage_ax2",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "y axis voltage",
+                        "vals": "<Numbers 0<=v<=30>",
+                        "name": "voltage_ax2",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "freq_ax2": {
+                        "value": 200,
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": 200,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_freq_ax2",
+                        "post_delay": 0,
+                        "unit": "Hz",
+                        "inter_delay": 0,
+                        "label": "y axis frequency",
+                        "vals": "<Numbers 1<=v<=10000>",
+                        "name": "freq_ax2",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "cap_ax2": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_cap_ax2",
+                        "post_delay": 0,
+                        "unit": "nF",
+                        "inter_delay": 0,
+                        "label": "y axis capacitance",
+                        "name": "cap_ax2",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "serialnum_ax3": {
+                        "value": "getser 3",
+                        "ts": "2019-10-25 15:08:00",
+                        "raw_value": "getser 3",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_serialnum_ax3",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "z axis serial number",
+                        "name": "serialnum_ax3",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "mode_ax3": {
+                        "value": "gnd",
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": "gnd",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_mode_ax3",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "z axis mode",
+                        "vals": "<Enum: {'inp', 'stp-', 'stp', 'gnd', 'cap', 'off', 'stp+'}>",
+                        "name": "mode_ax3",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "voltage_ax3": {
+                        "value": 50,
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": 50,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_voltage_ax3",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "z axis voltage",
+                        "vals": "<Numbers 0<=v<=50>",
+                        "name": "voltage_ax3",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "freq_ax3": {
+                        "value": 200,
+                        "ts": "2019-10-25 15:07:59",
+                        "raw_value": 200,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_freq_ax3",
+                        "post_delay": 0,
+                        "unit": "Hz",
+                        "inter_delay": 0,
+                        "label": "z axis frequency",
+                        "vals": "<Numbers 1<=v<=10000>",
+                        "name": "freq_ax3",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    },
+                    "cap_ax3": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "atto_cap_ax3",
+                        "post_delay": 0,
+                        "unit": "nF",
+                        "inter_delay": 0,
+                        "label": "z axis capacitance",
+                        "name": "cap_ax3",
+                        "instrument": "instruments.atto.ANC300",
+                        "instrument_name": "atto"
+                    }
+                },
+                "name": "atto",
+                "address": "ASRL4::INSTR",
+                "terminator": "\r\n",
+                "timeout": 5.0,
+                "metadata": {
+                    "name": "atto",
+                    "model": "ANC300",
+                    "address": "ASRL4::INSTR",
+                    "timeout": 5,
+                    "terminator": "\r\n",
+                    "stopbits": 1,
+                    "baud_rate": 38400,
+                    "axes": {
+                        "x": 1,
+                        "y": 2,
+                        "z": 3
+                    },
+                    "voltage_limits": {
+                        "RT": {
+                            "x": "25 V",
+                            "y": "25 V",
+                            "z": "30 V"
+                        },
+                        "LT": {
+                            "x": "30 V",
+                            "y": "30 V",
+                            "z": "50 V"
+                        }
+                    },
+                    "default_frequency": {
+                        "x": "100 Hz",
+                        "y": "200 Hz",
+                        "z": "200 Hz"
+                    },
+                    "constants": {},
+                    "history": {}
+                }
+            },
+            "lakeshore": {
+                "functions": {},
+                "submodules": {
+                    "A": {
+                        "functions": {},
+                        "submodules": {},
+                        "__class__": "instruments.lakeshore.SensorChannel",
+                        "parameters": {
+                            "temperature": {
+                                "value": 9.27,
+                                "ts": "2019-10-26 21:27:57",
+                                "raw_value": "+09.270",
+                                "__class__": "qcodes.instrument.parameter.Parameter",
+                                "full_name": "lakeshore_ChanA_temperature",
+                                "post_delay": 0,
+                                "unit": "K",
+                                "inter_delay": 0,
+                                "label": "Temerature",
+                                "name": "temperature",
+                                "instrument": "instruments.lakeshore.SensorChannel",
+                                "instrument_name": "lakeshore_ChanA"
+                            },
+                            "sensor_raw": {
+                                "value": 1.3877,
+                                "ts": "2019-10-26 13:03:24",
+                                "raw_value": "+1.3877",
+                                "__class__": "qcodes.instrument.parameter.Parameter",
+                                "full_name": "lakeshore_ChanA_sensor_raw",
+                                "post_delay": 0,
+                                "unit": "Ohms",
+                                "inter_delay": 0,
+                                "label": "Raw_Reading",
+                                "name": "sensor_raw",
+                                "instrument": "instruments.lakeshore.SensorChannel",
+                                "instrument_name": "lakeshore_ChanA"
+                            },
+                            "sensor_status": {
+                                "value": "OK",
+                                "ts": "2019-10-26 13:03:24",
+                                "raw_value": "000",
+                                "__class__": "qcodes.instrument.parameter.Parameter",
+                                "full_name": "lakeshore_ChanA_sensor_status",
+                                "post_delay": 0,
+                                "unit": "",
+                                "val_mapping": {
+                                    "OK": 0,
+                                    "Invalid Reading": 1,
+                                    "Temp Underrange": 16,
+                                    "Temp Overrange": 32,
+                                    "Sensor Units Zero": 64,
+                                    "Sensor Units Overrange": 128
+                                },
+                                "inter_delay": 0,
+                                "label": "Sensor_Status",
+                                "vals": "<Enum: {'OK', 'Temp Overrange', 'Sensor Units Overrange', 'Invalid Reading', 'Temp Underrange', 'Sensor Units Zero'}>",
+                                "name": "sensor_status",
+                                "instrument": "instruments.lakeshore.SensorChannel",
+                                "instrument_name": "lakeshore_ChanA"
+                            },
+                            "sensor_name": {
+                                "value": "Input A        ",
+                                "ts": "2019-10-26 13:03:24",
+                                "raw_value": "Input A        ",
+                                "__class__": "qcodes.instrument.parameter.Parameter",
+                                "full_name": "lakeshore_ChanA_sensor_name",
+                                "post_delay": 0,
+                                "unit": "",
+                                "inter_delay": 0,
+                                "label": "Sensor_Name",
+                                "vals": "<Strings len>=15>",
+                                "name": "sensor_name",
+                                "instrument": "instruments.lakeshore.SensorChannel",
+                                "instrument_name": "lakeshore_ChanA"
+                            }
+                        },
+                        "name": "lakeshore_ChanA"
+                    },
+                    "channels": {
+                        "snapshotable": false,
+                        "__class__": "qcodes.instrument.channel.ChannelList"
+                    }
+                },
+                "__class__": "instruments.lakeshore.Model_335",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": "LSCI",
+                            "model": "335",
+                            "serial": "335A01J/#######",
+                            "firmware": "1.2"
+                        },
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": {
+                            "vendor": "LSCI",
+                            "model": "335",
+                            "serial": "335A01J/#######",
+                            "firmware": "1.2"
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "lakeshore_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "instruments.lakeshore.Model_335",
+                        "instrument_name": "lakeshore"
+                    },
+                    "timeout": {
+                        "value": 5.0,
+                        "ts": "2019-10-26 21:12:45",
+                        "raw_value": 5.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "lakeshore_timeout",
+                        "post_delay": 0,
+                        "unit": "s",
+                        "inter_delay": 0,
+                        "label": "timeout",
+                        "vals": "<MultiType: Numbers v>=0, Enum: {None}>",
+                        "name": "timeout",
+                        "instrument": "instruments.lakeshore.Model_335",
+                        "instrument_name": "lakeshore"
+                    },
+                    "set_temperature": {
+                        "value": 9.270000000000001,
+                        "ts": "2019-10-26 21:26:48",
+                        "raw_value": 9.270000000000001,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "lakeshore_set_temperature",
+                        "post_delay": 0,
+                        "unit": "K",
+                        "inter_delay": 0,
+                        "label": "Set Temerature",
+                        "vals": "<Numbers 4<=v<=300>",
+                        "name": "set_temperature",
+                        "instrument": "instruments.lakeshore.Model_335",
+                        "instrument_name": "lakeshore"
+                    },
+                    "heater_range": {
+                        "value": 1,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "lakeshore_heater_range",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Heater range",
+                        "vals": "<Enum: {0, 1, 2, 3}>",
+                        "name": "heater_range",
+                        "instrument": "instruments.lakeshore.Model_335",
+                        "instrument_name": "lakeshore"
+                    },
+                    "ramp_rate": {
+                        "value": "1,+000.0",
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1,+000.0",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "lakeshore_ramp_rate",
+                        "post_delay": 0,
+                        "unit": "K/min",
+                        "inter_delay": 0,
+                        "label": "Heater range",
+                        "vals": "<Numbers v>=0>",
+                        "name": "ramp_rate",
+                        "instrument": "instruments.lakeshore.Model_335",
+                        "instrument_name": "lakeshore"
+                    }
+                },
+                "name": "lakeshore",
+                "address": "ASRL5::INSTR",
+                "terminator": "\r\n",
+                "timeout": 5.0
+            },
+            "keithley": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "instruments.keithley_2400.Keithley_2400",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": "KEITHLEY INSTRUMENTS INC.",
+                            "model": "2440",
+                            "serial": "0987762",
+                            "firmware": "C26   Jul  1 2003 13:56:08/A02  /B/A"
+                        },
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": {
+                            "vendor": "KEITHLEY INSTRUMENTS INC.",
+                            "model": "2440",
+                            "serial": "0987762",
+                            "firmware": "C26   Jul  1 2003 13:56:08/A02  /B/A"
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "timeout": {
+                        "value": 5.0,
+                        "ts": "2019-10-26 21:12:45",
+                        "raw_value": 5.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_timeout",
+                        "post_delay": 0,
+                        "unit": "s",
+                        "inter_delay": 0,
+                        "label": "timeout",
+                        "vals": "<MultiType: Numbers v>=0, Enum: {None}>",
+                        "name": "timeout",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "rangev": {
+                        "value": 0.21,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "0.21",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_rangev",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Voltage range",
+                        "name": "rangev",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "rangei": {
+                        "value": 0.105,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1.050000E-01",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_rangei",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Current range",
+                        "name": "rangei",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "compliancev": {
+                        "value": 10.0,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1.000000E+01",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_compliancev",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Voltage Compliance",
+                        "name": "compliancev",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "compliancei": {
+                        "value": 1e-05,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1.000000E-05",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_compliancei",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Current Compliance",
+                        "name": "compliancei",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "volt": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_volt",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Voltage",
+                        "name": "volt",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "curr": {
+                        "value": 0,
+                        "ts": "2019-10-25 15:08:00",
+                        "raw_value": 0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_curr",
+                        "post_delay": 0,
+                        "unit": "A",
+                        "inter_delay": 0,
+                        "label": "Current",
+                        "name": "curr",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "mode": {
+                        "value": "CURR",
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "CURR",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_mode",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Mode",
+                        "vals": "<Enum: {'VOLT', 'CURR'}>",
+                        "name": "mode",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "sense": {
+                        "value": "\"VOLT:DC\",\"CURR:DC\"",
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "\"VOLT:DC\",\"CURR:DC\"",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_sense",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Sense mode",
+                        "vals": "<Strings>",
+                        "name": "sense",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "output": {
+                        "value": 1,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_output",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "output",
+                        "name": "output",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "nplcv": {
+                        "value": 1.0,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1.00",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_nplcv",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Voltage integration time",
+                        "name": "nplcv",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "nplci": {
+                        "value": 1.0,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "1.00",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_nplci",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Current integration time",
+                        "name": "nplci",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    },
+                    "resistance": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "keithley_resistance",
+                        "post_delay": 0,
+                        "unit": "Ohm",
+                        "inter_delay": 0,
+                        "label": "Resistance",
+                        "name": "resistance",
+                        "instrument": "instruments.keithley_2400.Keithley_2400",
+                        "instrument_name": "keithley"
+                    }
+                },
+                "name": "keithley",
+                "address": "GPIB1::25::7::INSTR",
+                "terminator": "\n",
+                "timeout": 5.0
+            },
+            "ANZ150": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "scanner.Scanner",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": null,
+                            "model": "ANZ150",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": {
+                            "vendor": null,
+                            "model": "ANZ150",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "ANZ150_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "scanner.Scanner",
+                        "instrument_name": "ANZ150"
+                    },
+                    "position": {
+                        "value": [
+                            -0.431,
+                            0.4,
+                            3.771
+                        ],
+                        "ts": "2019-10-26 21:27:26",
+                        "raw_value": [
+                            -0.431,
+                            0.4,
+                            3.771
+                        ],
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "ANZ150_position",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Scanner position",
+                        "vals": "<Lists : <Numbers -4<=v<=7.5>>",
+                        "name": "position",
+                        "instrument": "scanner.Scanner",
+                        "instrument_name": "ANZ150"
+                    },
+                    "position_x": {
+                        "value": 0.7999999999999999,
+                        "ts": "2019-10-26 21:26:39",
+                        "raw_value": 0.7999999999999999,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "ANZ150_position_x",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "x position",
+                        "vals": "<Numbers -4<=v<=4>",
+                        "name": "position_x",
+                        "instrument": "scanner.Scanner",
+                        "instrument_name": "ANZ150"
+                    },
+                    "position_y": {
+                        "value": -0.002,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": -0.002,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "ANZ150_position_y",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "y position",
+                        "vals": "<Numbers -4<=v<=4>",
+                        "name": "position_y",
+                        "instrument": "scanner.Scanner",
+                        "instrument_name": "ANZ150"
+                    },
+                    "position_z": {
+                        "value": 4.2,
+                        "ts": "2019-10-26 13:04:08",
+                        "raw_value": 4.2,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "ANZ150_position_z",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "z position",
+                        "vals": "<Numbers 0<=v<=7.5>",
+                        "name": "position_z",
+                        "instrument": "scanner.Scanner",
+                        "instrument_name": "ANZ150"
+                    }
+                },
+                "name": "ANZ150",
+                "metadata": {
+                    "name": "ANZ150",
+                    "constants": {
+                        "RT": {
+                            "x": "40 um/V",
+                            "y": "40 um/V",
+                            "z": "13.3 um/V"
+                        },
+                        "LT": {
+                            "x": "12.5 um/V",
+                            "y": "12.5 um/V",
+                            "z": "2.67 um/V"
+                        },
+                        "comment": "um/V_daq"
+                    },
+                    "voltage_limits": {
+                        "RT": {
+                            "x": [
+                                0,
+                                3
+                            ],
+                            "y": [
+                                0,
+                                3
+                            ],
+                            "z": [
+                                0,
+                                3
+                            ]
+                        },
+                        "LT": {
+                            "x": [
+                                -4,
+                                4
+                            ],
+                            "y": [
+                                -4,
+                                4
+                            ],
+                            "z": [
+                                0,
+                                7.5
+                            ]
+                        },
+                        "unit": "V",
+                        "comment": "V_daq should never be outside of voltage_limits."
+                    },
+                    "voltage_retract": {
+                        "RT": "0 V",
+                        "LT": "0 V"
+                    },
+                    "speed": {
+                        "value": "3 V/s",
+                        "comment": "Rate of movement of the scanner (when not scanning)."
+                    },
+                    "plane": {
+                        "is_current": false,
+                        "x": 0.0014562323333192559,
+                        "y": 0.03926027681657508,
+                        "z": 3.857359658323049
+                    },
+                    "cantilever": {
+                        "calibration": "2 mV/pF",
+                        "comment": "CAP lockin X reading, freq = 14.86 kHz, amp = 8 V"
+                    },
+                    "daq": {
+                        "model": "NI USB-6363",
+                        "name": "Dev2",
+                        "channels": {
+                            "analog_inputs": {
+                                "SUSCY": 1,
+                                "CAP": 2,
+                                "SUSCX": 3,
+                                "MAG": 4,
+                                "x_cap": 5,
+                                "y_cap": 6,
+                                "x": 7,
+                                "y": 16,
+                                "z": 17,
+                                "aux": 18
+                            },
+                            "analog_outputs": {
+                                "x": 0,
+                                "y": 1,
+                                "z": 2,
+                                "aux": 3
+                            }
+                        },
+                        "rate": "600 kHz",
+                        "max_rate": {
+                            "analog_inputs": {
+                                "1 channel": "2 MHz",
+                                "multichannel": "1 MHz",
+                                "comment": "Multichannel value is aggregate for all ai channels."
+                            },
+                            "analog_outputs": {
+                                "1 channels": "2.86 MHz",
+                                "2 channels": "2.00 MHz",
+                                "3 channels": "1.54 MHz",
+                                "4 channels": "1.25 MHz",
+                                "comment": "Max ao rates are per channel."
+                            }
+                        }
+                    }
+                }
+            },
+            "SQUID": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "squids.Susceptometer",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": null,
+                            "model": "SQUID",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": {
+                            "vendor": null,
+                            "model": "SQUID",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SQUID_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "squids.Susceptometer",
+                        "instrument_name": "SQUID"
+                    }
+                },
+                "name": "SQUID",
+                "metadata": {
+                    "name": "SQUID",
+                    "type": "susceptometer",
+                    "description": "Hypres/Ng 0.4um inside radius pickup loop susceptometer",
+                    "modulation_width": "0.32 V/Phi0",
+                    "FC_PU_mutual": "286 Phi0/A",
+                    "feedback": {
+                        "type": "red pitaya"
+                    },
+                    "dimensions": {
+                        "PU_ri": "0.4 um",
+                        "PU_ro": "1.0 um",
+                        "FC_ri": "1.5 um",
+                        "FC_ro": "3.0 um"
+                    }
+                }
+            },
+            "CAP_lockin": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "instruments.hf2li.HF2LI",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": null,
+                            "model": "CAP_lockin",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": {
+                            "vendor": null,
+                            "model": "CAP_lockin",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "gain_X": {
+                        "value": 10000.005870633759,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 10000.005870633759,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_gain_X",
+                        "post_delay": 0,
+                        "unit": "V/Vrms",
+                        "inter_delay": 0,
+                        "label": "X output gain",
+                        "vals": "<Numbers>",
+                        "name": "gain_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "offset_X": {
+                        "value": 0.0,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": 0.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_offset_X",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "X output offset",
+                        "vals": "<Numbers -2560<=v<=2560>",
+                        "name": "offset_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "auxout_X": {
+                        "value": 0.01907377737087046,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": 0.01907377737087046,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_auxout_X",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Scaled X output value",
+                        "name": "auxout_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "output_X": {
+                        "value": "X",
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "X",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_output_X",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "X outptut select",
+                        "name": "output_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "gain_Y": {
+                        "value": 1.0143838504882297,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": 1.0143838504882297,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_gain_Y",
+                        "post_delay": 0,
+                        "unit": "V/Vrms",
+                        "inter_delay": 0,
+                        "label": "Y output gain",
+                        "vals": "<Numbers>",
+                        "name": "gain_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "offset_Y": {
+                        "value": 0.0,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": 0.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_offset_Y",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Y output offset",
+                        "vals": "<Numbers -2560<=v<=2560>",
+                        "name": "offset_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "auxout_Y": {
+                        "value": -0.00015259021896696368,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": -0.00015259021896696368,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_auxout_Y",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Scaled Y output value",
+                        "name": "auxout_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "output_Y": {
+                        "value": "Y",
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": "Y",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_output_Y",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Y outptut select",
+                        "name": "output_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "time_constant": {
+                        "value": 0.010164495915951307,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": 0.010164495915951307,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_time_constant",
+                        "post_delay": 0,
+                        "unit": "s",
+                        "inter_delay": 0,
+                        "label": "Time constant",
+                        "vals": "<Numbers>",
+                        "name": "time_constant",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "frequency": {
+                        "value": 20022.883295389704,
+                        "ts": "2019-10-26 13:03:24",
+                        "raw_value": 20022.883295389704,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_frequency",
+                        "post_delay": 0,
+                        "unit": "Hz",
+                        "inter_delay": 0,
+                        "label": "Frequency",
+                        "name": "frequency",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "sigout_range": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_sigout_range",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Signal output range",
+                        "vals": "<Enum: {0.1, 1, 10, 0.01}>",
+                        "name": "sigout_range",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "sigout_offset": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_sigout_offset",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Signal output offset",
+                        "vals": "<Numbers -1<=v<=1>",
+                        "name": "sigout_offset",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    },
+                    "sigout_amplitude": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "CAP_lockin_sigout_amplitude",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Signal output amplitude",
+                        "vals": "<Numbers -1<=v<=1>",
+                        "name": "sigout_amplitude",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "CAP_lockin"
+                    }
+                },
+                "name": "CAP_lockin"
+            },
+            "SUSC_lockin": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "instruments.hf2li.HF2LI",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": null,
+                            "model": "SUSC_lockin",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": {
+                            "vendor": null,
+                            "model": "SUSC_lockin",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "gain_X": {
+                        "value": 9.995568572776392,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 9.995568572776392,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_gain_X",
+                        "post_delay": 0,
+                        "unit": "V/Vrms",
+                        "inter_delay": 0,
+                        "label": "X output gain",
+                        "vals": "<Numbers>",
+                        "name": "gain_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "offset_X": {
+                        "value": 0.0,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 0.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_offset_X",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "X output offset",
+                        "vals": "<Numbers -2560<=v<=2560>",
+                        "name": "offset_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "auxout_X": {
+                        "value": 1.8767071030746934,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 1.8767071030746934,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_auxout_X",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Scaled X output value",
+                        "name": "auxout_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "output_X": {
+                        "value": "X",
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": "X",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_output_X",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "X outptut select",
+                        "name": "output_X",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "gain_Y": {
+                        "value": 99.9911310063908,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 99.9911310063908,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_gain_Y",
+                        "post_delay": 0,
+                        "unit": "V/Vrms",
+                        "inter_delay": 0,
+                        "label": "Y output gain",
+                        "vals": "<Numbers>",
+                        "name": "gain_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "offset_Y": {
+                        "value": 0.0,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 0.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_offset_Y",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Y output offset",
+                        "vals": "<Numbers -2560<=v<=2560>",
+                        "name": "offset_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "auxout_Y": {
+                        "value": 0.035553521019302536,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 0.035553521019302536,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_auxout_Y",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Scaled Y output value",
+                        "name": "auxout_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "output_Y": {
+                        "value": "Y",
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": "Y",
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_output_Y",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "Y outptut select",
+                        "name": "output_Y",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "time_constant": {
+                        "value": 0.0474353095232918,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 0.0474353095232918,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_time_constant",
+                        "post_delay": 0,
+                        "unit": "s",
+                        "inter_delay": 0,
+                        "label": "Time constant",
+                        "vals": "<Numbers>",
+                        "name": "time_constant",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "frequency": {
+                        "value": 500.0285730005771,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 500.0285730005771,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_frequency",
+                        "post_delay": 0,
+                        "unit": "Hz",
+                        "inter_delay": 0,
+                        "label": "Frequency",
+                        "name": "frequency",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "sigout_range": {
+                        "value": 10.0,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 10.0,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_sigout_range",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Signal output range",
+                        "vals": "<Enum: {0.1, 1, 10, 0.01}>",
+                        "name": "sigout_range",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "sigout_offset": {
+                        "value": null,
+                        "ts": null,
+                        "raw_value": null,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_sigout_offset",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Signal output offset",
+                        "vals": "<Numbers -1<=v<=1>",
+                        "name": "sigout_offset",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    },
+                    "sigout_amplitude": {
+                        "value": 0.39999694821890425,
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": 0.39999694821890425,
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "SUSC_lockin_sigout_amplitude",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Signal output amplitude",
+                        "vals": "<Numbers -1<=v<=1>",
+                        "name": "sigout_amplitude",
+                        "instrument": "instruments.hf2li.HF2LI",
+                        "instrument_name": "SUSC_lockin"
+                    }
+                },
+                "name": "SUSC_lockin"
+            },
+            "daq_ai": {
+                "functions": {},
+                "submodules": {},
+                "__class__": "instruments.daq.DAQAnalogInputs",
+                "parameters": {
+                    "IDN": {
+                        "value": {
+                            "vendor": null,
+                            "model": "daq_ai",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "ts": "2019-10-26 21:27:56",
+                        "raw_value": {
+                            "vendor": null,
+                            "model": "daq_ai",
+                            "serial": null,
+                            "firmware": null
+                        },
+                        "__class__": "qcodes.instrument.parameter.Parameter",
+                        "full_name": "daq_ai_IDN",
+                        "post_delay": 0,
+                        "unit": "",
+                        "inter_delay": 0,
+                        "label": "IDN",
+                        "vals": "<Anything>",
+                        "name": "IDN",
+                        "instrument": "instruments.daq.DAQAnalogInputs",
+                        "instrument_name": "daq_ai"
+                    },
+                    "voltage": {
+                        "ts": null,
+                        "__class__": "instruments.daq.DAQAnalogInputVoltages",
+                        "full_name": "daq_ai_voltage",
+                        "post_delay": 0,
+                        "unit": "V",
+                        "inter_delay": 0,
+                        "label": "Voltage",
+                        "name": "voltage",
+                        "instrument": "instruments.daq.DAQAnalogInputs",
+                        "instrument_name": "daq_ai"
+                    }
+                },
+                "name": "daq_ai",
+                "metadata": {
+                    "dev_name": "Dev2",
+                    "rate": "100000.0 Hz",
+                    "channels": {
+                        "MAG": 4,
+                        "SUSCX": 3,
+                        "SUSCY": 1,
+                        "CAP": 2,
+                        "x_cap": 5,
+                        "y_cap": 6
+                    }
+                }
+            }
+        },
+        "parameters": {},
+        "components": {},
+        "default_measurement": []
+    },
+    "loop": {
+        "__class__": "qcodes.loops.ActiveLoop",
+        "sweep_values": {
+            "parameter": {
+                "value": 0.7999999999999999,
+                "ts": "2019-10-26 21:26:39",
+                "raw_value": 0.7999999999999999,
+                "__class__": "qcodes.instrument.parameter.Parameter",
+                "full_name": "ANZ150_position_x",
+                "post_delay": 0,
+                "unit": "V",
+                "inter_delay": 0,
+                "label": "x position",
+                "vals": "<Numbers -4<=v<=4>",
+                "name": "position_x",
+                "instrument": "scanner.Scanner",
+                "instrument_name": "ANZ150"
+            },
+            "values": [
+                {
+                    "first": -1.6,
+                    "last": 0.7999999999999999,
+                    "num": 100,
+                    "type": "linear"
+                }
+            ]
+        },
+        "delay": 0.1,
+        "actions": [
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.scan_line of <Scanner: ANZ150>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Task.start of Task(name=scan_plane_ai_task)>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.control_ao_task of <Scanner: ANZ150>>"
+            },
+            {
+                "ts": null,
+                "__class__": "instruments.daq.DAQAnalogInputVoltages",
+                "full_name": "daq_ai_voltage",
+                "post_delay": 0,
+                "unit": "V",
+                "inter_delay": 0,
+                "label": "Voltage",
+                "name": "voltage",
+                "instrument": "instruments.daq.DAQAnalogInputs",
+                "instrument_name": "daq_ai"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Task.wait_until_done of Task(name=scan_plane_ai_task)>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.control_ao_task of <Scanner: ANZ150>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Task.stop of Task(name=scan_plane_ai_task)>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.control_ao_task of <Scanner: ANZ150>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.control_ao_task of <Scanner: ANZ150>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.goto_start_of_next_line of <Scanner: ANZ150>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method ScanPlot.update of <plots.ScanPlot object at 0x0000018AF1D18208>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method ScanPlot.save of <plots.ScanPlot object at 0x0000018AF1D18208>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Counter.advance of <utils.Counter object at 0x0000018AF1D18240>>"
+            }
+        ],
+        "then_actions": [
+            {
+                "type": "Task",
+                "func": "<bound method Task.stop of Task(name=scan_plane_ai_task)>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Task.close of Task(name=scan_plane_ai_task)>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method DAQAnalogInputs.clear_instances of <DAQAnalogInputs: daq_ai>>"
+            },
+            {
+                "type": "Task",
+                "func": "<bound method Scanner.goto of <Scanner: ANZ150>>"
+            }
+        ],
+        "metadata": {
+            "fname": "scan",
+            "fast_ax": "y",
+            "range": {
+                "x": "30 um",
+                "y": "30 um"
+            },
+            "center": {
+                "x": "-5 um",
+                "y": "20 um"
+            },
+            "height": "-0.1V",
+            "scan_rate": "5 um/s",
+            "scan_size": {
+                "x": 100,
+                "y": 100
+            },
+            "channels": {
+                "MAG": {
+                    "label": "Magnetometry",
+                    "gain": 10,
+                    "filters": {
+                        "lowpass": {
+                            "cutoff": "300Hz",
+                            "slope": "6 dB/octave"
+                        },
+                        "highpass": {
+                            "cutoff": "0 Hz",
+                            "slope": "0 dB/octave"
+                        }
+                    },
+                    "unit": "mPhi0",
+                    "unit_latex": "m$\\Phi_0$",
+                    "idx": 0
+                },
+                "SUSCX": {
+                    "lockin": {
+                        "name": "SUSC"
+                    },
+                    "label": "Susceptibility",
+                    "gain": 1,
+                    "r_lead": "1 kOhm",
+                    "unit": "Phi0/A",
+                    "unit_latex": "$\\Phi_0$/A",
+                    "idx": 1
+                },
+                "SUSCY": {
+                    "lockin": {
+                        "name": "SUSC"
+                    },
+                    "label": "Susceptibility (out of phase)",
+                    "gain": 1,
+                    "r_lead": "1 kOhm",
+                    "unit": "Phi0/A",
+                    "unit_latex": "$\\Phi_0$/A",
+                    "idx": 2
+                },
+                "CAP": {
+                    "lockin": {
+                        "name": "CAP"
+                    },
+                    "label": "Capacitance",
+                    "gain": 1,
+                    "unit": "fF",
+                    "unit_latex": "fF",
+                    "idx": 3
+                },
+                "x_cap": {
+                    "label": "X position",
+                    "gain": 1,
+                    "conversion": "0.5 mm/V",
+                    "unit": "mm",
+                    "unit_latex": "mm",
+                    "idx": 4
+                },
+                "y_cap": {
+                    "label": "Y position",
+                    "gain": 1,
+                    "conversion": "0.5 mm/V",
+                    "unit": "mm",
+                    "unit_latex": "mm",
+                    "idx": 5
+                }
+            },
+            "prefactors": {
+                "MAG": "312.49999999999994 milliPhi0 / volt",
+                "SUSCX": "110.53526040644404 Phi0 / ampere / volt",
+                "SUSCY": "11.049607740027373 Phi0 / ampere / volt",
+                "CAP": "70.71063660702971 femtofarad / volt",
+                "x_cap": "0.5 millimeter / volt",
+                "y_cap": "0.5 millimeter / volt"
+            }
+        },
+        "ts_start": "2019-10-26 21:27:57",
+        "use_threads": false,
+        "ts_end": "2019-10-26 21:41:55"
+    },
+    "__class__": "qcodes.data.data_set.DataSet",
+    "location": "data/2019-10-26/#050_scan_21-27-57",
+    "arrays": {
+        "ANZ150_position_x_set": {
+            "__class__": "qcodes.data.data_array.DataArray",
+            "raw_value": 0.7999999999999999,
+            "full_name": "ANZ150_position_x",
+            "post_delay": 0,
+            "unit": "V",
+            "inter_delay": 0,
+            "label": "x position",
+            "vals": "<Numbers -4<=v<=4>",
+            "name": "position_x",
+            "instrument": "scanner.Scanner",
+            "instrument_name": "ANZ150",
+            "array_id": "ANZ150_position_x_set",
+            "shape": [
+                100
+            ],
+            "action_indices": [],
+            "is_setpoint": true
+        },
+        "index0_set": {
+            "__class__": "qcodes.data.data_array.DataArray",
+            "array_id": "index0_set",
+            "name": "index0",
+            "shape": [
+                100,
+                6
+            ],
+            "unit": null,
+            "label": "index0",
+            "action_indices": [
+                3
+            ],
+            "is_setpoint": true
+        },
+        "index1_set": {
+            "__class__": "qcodes.data.data_array.DataArray",
+            "array_id": "index1_set",
+            "name": "index1",
+            "shape": [
+                100,
+                6,
+                100
+            ],
+            "unit": null,
+            "label": "index1",
+            "action_indices": [
+                3
+            ],
+            "is_setpoint": true
+        },
+        "daq_ai_voltage": {
+            "__class__": "qcodes.data.data_array.DataArray",
+            "full_name": "daq_ai_voltage",
+            "post_delay": 0,
+            "unit": "V",
+            "inter_delay": 0,
+            "label": "Voltage",
+            "name": "voltage",
+            "instrument": "instruments.daq.DAQAnalogInputs",
+            "instrument_name": "daq_ai",
+            "array_id": "daq_ai_voltage",
+            "shape": [
+                100,
+                6,
+                100
+            ],
+            "action_indices": [
+                3
+            ],
+            "is_setpoint": false
+        }
+    },
+    "formatter": "qcodes.data.gnuplot_format.GNUPlotFormat",
+    "io": "<DiskIO, base_location='C:\\\\Users\\\\ACSAFM\\\\Dropbox (Moler group)\\\\TeamFrieda\\\\2019-10-14 Nb holy sample 2'>"
+}
