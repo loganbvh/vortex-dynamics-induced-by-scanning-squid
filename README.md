@@ -2,6 +2,11 @@
 
 ![Vortex dynamics](data/dynamics.webp)
 
+## Full dataset
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7857363.svg)](https://doi.org/10.5281/zenodo.7857363)
+
+
 ## Depedencies
 - [`superscreen`](https://github.com/loganbvh/superscreen) version [`0.8.1`](https://pypi.org/project/superscreen/0.8.1/)
 - [`tdgl`](https://github.com/loganbvh/py-tdgl) version [`0.2.1`](https://pypi.org/project/tdgl/0.2.1/)
@@ -14,7 +19,8 @@
     - `squid_susc_fc_slot_array.sbatch`: slurm script used to launch TDGL simulations for figure 8.
     - `squid-single-vortex.sh`: bash script used to launch the TDGL simulation for figure 4.
   - `squids/`: [SuperScreen](https://github.com/loganbvh/superscreen) models for SQUID susceptometers.
-- `data/`: Not all of the simulation results are stored in this GitHub respository because the files are too large. You can download the full set of simulation results from Zenodo.
+- `data/`: Not all of the simulation results are stored in this GitHub respository because the files are too large. You can download the full set of simulation results from Zenodo: DOI [10.5281/zenodo.7857363
+](https://doi.org/10.5281/zenodo.7857363).
   - `measurement/`: data from scanning SQUID measurements.
     - `fc-current-sweep/`: scanning SQUID data for figures 3 and 5
     - `slot/`: scanning SQUID data for figure 6.
