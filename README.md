@@ -2,6 +2,10 @@
 
 ![Vortex dynamics](data/dynamics.webp)
 
+## arXiv preprint
+
+[![arXiv](https://img.shields.io/badge/arXiv-2304.13093-b31b1b.svg)](https://arxiv.org/abs/2304.13093)
+
 ## Full dataset
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7857363.svg)](https://doi.org/10.5281/zenodo.7857363)
